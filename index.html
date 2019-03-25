@@ -344,6 +344,133 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/21/In agiven text, the number of substrings that start with an A and end with a B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MaxweiTang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Maxwei`s Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/21/In agiven text, the number of substrings that start with an A and end with a B/" itemprop="url">arithmetic- In agiven text, the number of substrings that start with an A and end with a B</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-21T21:16:29+08:00">
+                2019-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="作业一"><a href="#作业一" class="headerlink" title="作业一"></a>作业一</h1><p>在一段给定的文本中查找以A开始、以B结尾的子串的数量</p>
+<h2 id="分析问题"><a href="#分析问题" class="headerlink" title="分析问题"></a>分析问题</h2><ul>
+<li>以<code>A</code>开头、以<code>B</code>结尾，即<code>A</code>必须位于<code>B</code>之前</li>
+<li>若一字符串为<code>AAAB</code>可以看出其中符合要求的子串的个数为<code>3</code>，即在<code>B</code>之前A的个数</li>
+<li>所以我们可以得出结论：以<code>A</code>开始、<code>B</code>结束的字串的个数为在<code>B</code>之前<code>A</code>的个数</li>
+</ul>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @description: In agiven text, the number of substrings that start with an A and end with a B.</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; - tarString Target text</span></span><br><span class="line"><span class="comment"> * @return: sum - The number of substrings that start with an A and end with a B.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">subString</span>(<span class="params">tarString</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> Anum = <span class="number">0</span></span><br><span class="line">    <span class="keyword">var</span> sum = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; tarString.length; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(tarString[i] === <span class="string">'A'</span>)&#123;</span><br><span class="line">            Anum++</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(tarString[i] === <span class="string">'B'</span>)&#123;</span><br><span class="line">            sum = sum + Anum</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"CABAAXBYA"</span></span><br><span class="line"><span class="built_in">console</span>.log(subString(str))</span><br></pre></td></tr></table></figure>
+<h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><p>因为只需要遍历一遍字符串，所以它的时间复杂度为<code>O(n)</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -390,7 +517,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -398,6 +525,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
             
 
           </nav>
