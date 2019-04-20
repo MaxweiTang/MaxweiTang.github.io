@@ -105,14 +105,14 @@
 <meta property="og:site_name" content="Maxwei`s Blog">
 <meta property="og:description" content="希尔排序(Shell’s Sort)是插入排序的一种又称“缩小增量排序”（Diminishing Increment Sort），是直接插入排序算法的一种更高效的改进版本。希尔排序是非稳定排序算法。该方法因D.L.Shell于1959年提出而得名。 要了解希尔排序，首先我们来看看什么是直接插入排序">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://popz4mcuf.bkt.clouddn.com/%E7%9B%B4%E6%8E%A5%E6%8E%92%E5%BA%8F%E5%9B%BE%E8%A7%A3.jpg">
-<meta property="og:image" content="http://popz4mcuf.bkt.clouddn.com/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F%E5%9B%BE%E8%A7%A3.jpg">
-<meta property="og:image" content="http://popz4mcuf.bkt.clouddn.com/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F%E7%A8%B3%E5%AE%9A%E6%80%A7.jpg">
-<meta property="og:updated_time" content="2019-04-11T14:43:56.221Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/04/20/ECEHVf.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/04/20/ECETqP.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/04/20/ECEort.png">
+<meta property="og:updated_time" content="2019-04-20T02:22:00.341Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shell Square">
 <meta name="twitter:description" content="希尔排序(Shell’s Sort)是插入排序的一种又称“缩小增量排序”（Diminishing Increment Sort），是直接插入排序算法的一种更高效的改进版本。希尔排序是非稳定排序算法。该方法因D.L.Shell于1959年提出而得名。 要了解希尔排序，首先我们来看看什么是直接插入排序">
-<meta name="twitter:image" content="http://popz4mcuf.bkt.clouddn.com/%E7%9B%B4%E6%8E%A5%E6%8E%92%E5%BA%8F%E5%9B%BE%E8%A7%A3.jpg">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/04/20/ECEHVf.png">
 
 
 
@@ -375,7 +375,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">WordCount:</span>
-           <span class="post-count">990字</span>
+           <span class="post-count">1k字</span>
            
          </span>
 	  
@@ -385,7 +385,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">min2read:</span>
-           <span class="post-count">3分钟</span>
+           <span class="post-count">4分钟</span>
            
          </span>
 
@@ -416,7 +416,7 @@
 <a id="more"></a>
 <h1 id="一、-直接插入排序"><a href="#一、-直接插入排序" class="headerlink" title="一、 直接插入排序"></a>一、 直接插入排序</h1><p>直接插入排序（Straight Insertion Sort）是一种最简单的排序方法，其基本操作是将一条记录插入到已排好的有序表中，从而得到一个新的、记录数量增1的有序表。</p>
 <h2 id="1-1、图解"><a href="#1-1、图解" class="headerlink" title="1.1、图解"></a>1.1、图解</h2><p>假如现在我们有一个数组 [ 1 , 5 , 9 , 7 , 10 , 15 , 65 , 13 , 20 ] ，现在要对其进行升序排序，使用直接插入排序步骤如下：</p>
-<p><img src="http://popz4mcuf.bkt.clouddn.com/%E7%9B%B4%E6%8E%A5%E6%8E%92%E5%BA%8F%E5%9B%BE%E8%A7%A3.jpg" alt="avatar"></p>
+<p><img src="https://s2.ax1x.com/2019/04/20/ECEHVf.png" alt="avatar"></p>
 <h2 id="1-2、算法分析"><a href="#1-2、算法分析" class="headerlink" title="1.2、算法分析"></a>1.2、算法分析</h2><p>假如想要数组最终为升序排序，那么直接插入排序有最好和最坏两种情况。</p>
 <ul>
 <li><p>最好情况：需要排序的数组已经是按照升序排序的了，那么只需要比较n-1次。</p>
@@ -436,8 +436,8 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">insertSort</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> len =arr.length;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;len; i++) &#123;</span><br><span class="line">		<span class="keyword">var</span> temp=arr[i];</span><br><span class="line">		<span class="keyword">var</span> j=i<span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">while</span> (j&gt;=<span class="number">0</span> &amp;&amp; arr[j]&gt;temp) &#123;</span><br><span class="line">				arr[j+<span class="number">1</span>]=arr[j];</span><br><span class="line">				j--;</span><br><span class="line">			&#125;</span><br><span class="line">		arr[j+<span class="number">1</span>]=temp;</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="二、希尔排序"><a href="#二、希尔排序" class="headerlink" title="二、希尔排序"></a>二、希尔排序</h1><p>希尔排序（由 D.L 希尔发明）是一种重要的排序算法，它对一个给定序列的若干 <em>increment</em> 序列分别应用插入排序。对序列的每一遍操作，都根据一些事先定义好的递减的补偿队列h<sub>1</sub> &gt; ··· h<sub>i</sub> &gt; ··· 1 来构造所要求的子序列，这个 <em>increment</em> 队列必须以 1 作为结尾。（该算法对任意补偿队列都有效，但有些 <em>increment</em> 队列的效率要比其他的高。）</p>
 <h2 id="1-1、图解-1"><a href="#1-1、图解-1" class="headerlink" title="1.1、图解"></a>1.1、图解</h2><p>同直接插入排序，现在我们有一个数组 [ 1 , 5 , 9 , 7 , 10 , 15 , 65 , 13 , 20 ] ，现在要对其进行升序排序，使用直接插入排序步骤如下：</p>
-<p><img src="http://popz4mcuf.bkt.clouddn.com/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F%E5%9B%BE%E8%A7%A3.jpg" alt="avatar"></p>
-<h2 id="1-2、关于希尔排序increment（增量）的取法"><a href="#1-2、关于希尔排序increment（增量）的取法" class="headerlink" title="1.2、关于希尔排序increment（增量）的取法"></a>1.2、关于希尔排序increment（增量）的取法</h2><p>增量increment的取法有各种方案。最初shell提出取increment=n/2向下取整，increment=increment/2向下取整，直到increment=1。但由于直到最后一步，在奇数位置的元素才会与偶数位置的元素进行比较，这样使用这个序列的效率会很低。后来Knuth提出取increment=n/3向下取整+1.还有人提出都取奇数为好，也有人提出increment互质为好。应用不同的序列会使希尔排序算法的性能有很大的差异。 </p>
+<p><img src="https://s2.ax1x.com/2019/04/20/ECETqP.png" alt="avatar"></p>
+<h2 id="1-2、关于希尔排序increment（增量）的取法"><a href="#1-2、关于希尔排序increment（增量）的取法" class="headerlink" title="1.2、关于希尔排序increment（增量）的取法"></a>1.2、关于希尔排序increment（增量）的取法</h2><p>增量increment的取法有各种方案。最初shell提出取increment=n/2向下取整，increment=increment/2向下取整，直到increment=1。但由于直到最后一步，在奇数位置的元素才会与偶数位置的元素进行比较，这样使用这个序列的效率会很低。后来Knuth提出取increment=n/3向下取整+1.还有人提出都取奇数为好，也有人提出increment互质为好。应用不同的序列会使希尔排序算法的性能有很大的差异。 这里我们采用的是数列以逆向形式从1开始，通过递归表达式 h=3*b+1  来产生，初始值为1。</p>
 <h2 id="1-3、希尔算法稳定性"><a href="#1-3、希尔算法稳定性" class="headerlink" title="1.3、希尔算法稳定性"></a>1.3、希尔算法稳定性</h2><ul>
 <li><p>何为排序算法的稳定性？</p>
 <p>假定在待排序的记录序列中，存在多个具有相同的关键字的记录，若经过排序，这些记录的相对次序保持不变，即在原序列中，r[i]=r[j]，且r[i]在r[j]之前，而在排序后的序列中，r[i]仍在r[j]之前，则称这种排序算法是稳定的；否则称为不稳定的。</p>
@@ -445,7 +445,7 @@
 </ul>
 <ul>
 <li><p>这里我们举一个小栗子：</p>
-<p><img src="http://popz4mcuf.bkt.clouddn.com/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F%E7%A8%B3%E5%AE%9A%E6%80%A7.jpg" alt="avatar"></p>
+<p><img src="https://s2.ax1x.com/2019/04/20/ECEort.png" alt="avatar"></p>
 <p>可以从图中看出 5 相互交换了位置。希尔排序中相等数据可能会交换位置，所以希尔排序是<code>不稳定</code>的算法。</p>
 </li>
 </ul>
@@ -528,8 +528,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/31/Magic Square/" rel="next" title="Magic Square">
-                <i class="fa fa-chevron-left"></i> Magic Square
+              <a href="/2019/03/31/Magic Square/" rel="next" title="magic square">
+                <i class="fa fa-chevron-left"></i> magic square
               </a>
             
           </div>
