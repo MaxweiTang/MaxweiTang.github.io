@@ -409,59 +409,14 @@
 
       
         
-          
-            <h1 id="牛客前端面经整理"><a href="#牛客前端面经整理" class="headerlink" title="牛客前端面经整理"></a>牛客前端面经整理</h1><p>文章出自<a href="https://www.nowcoder.com/tutorial/96" target="_blank" rel="noopener">https://www.nowcoder.com/tutorial/96</a>，本文章只是加上了自己的理解。</p>
-<h2 id="一、HTTP-HTML-游览器"><a href="#一、HTTP-HTML-游览器" class="headerlink" title="一、HTTP/HTML/游览器"></a>一、HTTP/HTML/游览器</h2><h3 id="1、http-与-https"><a href="#1、http-与-https" class="headerlink" title="1、http 与 https"></a>1、http 与 https</h3><ul>
-<li><p>基本概念：</p>
-<ul>
-<li>http：超文本传输协议。客户端和服务器端请求和应答的标准(TCP)，用于从<code>WWW</code>服务器传输超文本到本地游览器的传输协议。其可以提高游览器效率，减少网络传输。</li>
-<li>https：以安全为目标的<code>http</code>通道——<code>http</code>的安全版。即<code>http</code>下加入<code>SSL</code>层，https的安全基础是<code>SSL</code>。其主要作用是建立一个信息安全通道，确保数组的传输，确保网站的真实性。</li>
-</ul>
-</li>
-<li><p><code>http</code>和<code>https</code>两者的区别：</p>
-<ul>
-<li><code>http</code>协议传输的数据都是未加密的，即明文的。</li>
-<li><code>https</code>协议是由<code>http</code>和<code>SSL</code>协议构建的可进行加密传输和身份认证的网络协议。</li>
-<li>主要区别：<ul>
-<li>(1)：<code>https</code>协议需要<code>ca</code>(证书颁发机构、信任的第三方，承担公钥体系中公钥的合法性检验的责任）证书，费用较高。</li>
-<li>(2)：使用不同的链接方式，端口也不同。<code>http</code>协议端口为<code>80</code>，<code>https</code>协议端口为<code>443</code>。</li>
-<li>(3)：<code>http</code>协议连接是无状态的，<code>https</code>协议是由<code>SSL</code> + <code>http</code>协议构建的可进行加密传输、身份认证的网络协议，更加安全。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><code>https</code>协议的工作原理：</p>
-<p><img src="https://s2.ax1x.com/2019/07/24/eVCke1.png" alt="avatar"></p>
-<p>​                                                                            <small>图片来源：<a href="https://juejin.im/post/5c441073e51d455226654d60" target="_blank" rel="noopener">https://juejin.im/post/5c441073e51d455226654d60</a></small></p>
-<ul>
-<li>客户端使用<code>https url</code>访问服务器，要求<code>web</code>服务器建立<code>SSL</code>链接。</li>
-<li><code>web</code>服务器接口到客户端请求后，将网站的证书（证书中包含了公钥），传输给客户端。</li>
-<li>客服端对证书进行验证，并生成对称加密的会话密钥，通过<code>web</code>服务器的公钥对密钥进行加密，并发送给<code>web</code>服务端。</li>
-<li><code>web</code>服务器根据自己的私钥进行解密，得到会话密钥密钥。</li>
-<li><code>web</code>服务器通过会话密钥加密与客户端进行通信。</li>
-</ul>
-</li>
-<li><p><code>https</code>协议的优缺点：</p>
-<ul>
-<li>优点：<ul>
-<li>使用<code>https</code>协议可认证用户和服务器，确保数据发送到正确的客户机和服务器。</li>
-<li><code>https</code>协议是由<code>SSL+http</code>协议构建的可进行加密传输、身份认证的网络协议，要比<code>http</code>协议安全，可防止数据在传输过程中不被窃取、改变，确保数据的完整性。</li>
-<li><code>https</code>是现行架构下最安全的解决方案，虽然不是绝对安全，但它大幅增加了中间人攻击的成本。</li>
-<li>谷歌曾在2014年8月份调整搜索引擎算法，并称“比起同等<code>http</code>网站，采用<code>https</code>加密的网站在搜索结果中的排名将会更高”。</li>
-</ul>
-</li>
-<li>缺点：<ul>
-<li><code>https</code>握手阶段比较费时，会使页面加载时间延长50%，增加10%~20%的耗电。</li>
-<li><code>https</code>缓存不如<code>http</code>高效，会增加数据开销。</li>
-<li><code>SSL</code>证书需付费，功能越强大的证书费用越高。</li>
-<li><code>SSL</code>证书需要绑定<code>IP</code>，不能再同一个<code>IP</code>上绑定多个域名，<code>ipv4</code>资源支持不了这种消耗。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<big>未完持续</big>
-          
+          <h1 id="牛客前端面经整理"><a href="#牛客前端面经整理" class="headerlink" title="牛客前端面经整理"></a>牛客前端面经整理</h1><p>文章出自<a href="https://www.nowcoder.com/tutorial/96" target="_blank" rel="noopener">https://www.nowcoder.com/tutorial/96</a>，本文章只是加上了自己的理解。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/24/牛客前端面经整理/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
