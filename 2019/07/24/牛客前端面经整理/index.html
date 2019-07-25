@@ -106,7 +106,8 @@
 <meta property="og:description" content="牛客前端面经整理文章出自https://www.nowcoder.com/tutorial/96，本文章只是加上了自己的理解。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://s2.ax1x.com/2019/07/24/eVCke1.png">
-<meta property="og:updated_time" content="2019-07-24T09:33:05.277Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/07/25/eelOJS.png">
+<meta property="og:updated_time" content="2019-07-25T09:21:44.831Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="牛客前端面经整理">
 <meta name="twitter:description" content="牛客前端面经整理文章出自https://www.nowcoder.com/tutorial/96，本文章只是加上了自己的理解。">
@@ -373,7 +374,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">WordCount:</span>
-           <span class="post-count">778字</span>
+           <span class="post-count">2k字</span>
            
          </span>
 	  
@@ -383,7 +384,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">min2read:</span>
-           <span class="post-count">2分钟</span>
+           <span class="post-count">7分钟</span>
            
          </span>
 
@@ -411,11 +412,11 @@
       
         <h1 id="牛客前端面经整理"><a href="#牛客前端面经整理" class="headerlink" title="牛客前端面经整理"></a>牛客前端面经整理</h1><p>文章出自<a href="https://www.nowcoder.com/tutorial/96" target="_blank" rel="noopener">https://www.nowcoder.com/tutorial/96</a>，本文章只是加上了自己的理解。</p>
 <a id="more"></a>
-<h2 id="一、HTTP-HTML-游览器"><a href="#一、HTTP-HTML-游览器" class="headerlink" title="一、HTTP/HTML/游览器"></a>一、HTTP/HTML/游览器</h2><h3 id="1、http-与-https"><a href="#1、http-与-https" class="headerlink" title="1、http 与 https"></a>1、http 与 https</h3><ul>
+<h2 id="一、HTTP-HTML-游览器"><a href="#一、HTTP-HTML-游览器" class="headerlink" title="一、HTTP/HTML/游览器"></a>一、HTTP/HTML/游览器</h2><h3 id="1、http与-https"><a href="#1、http与-https" class="headerlink" title="1、http与 https"></a>1、<code>http</code>与 <code>https</code></h3><ul>
 <li><p>基本概念：</p>
 <ul>
-<li>http：超文本传输协议。客户端和服务器端请求和应答的标准(TCP)，用于从<code>WWW</code>服务器传输超文本到本地游览器的传输协议。其可以提高游览器效率，减少网络传输。</li>
-<li>https：以安全为目标的<code>http</code>通道——<code>http</code>的安全版。即<code>http</code>下加入<code>SSL</code>层，https的安全基础是<code>SSL</code>。其主要作用是建立一个信息安全通道，确保数组的传输，确保网站的真实性。</li>
+<li><code>http</code>：超文本传输协议。客户端和服务器端请求和应答的标准(TCP)，用于从<code>WWW</code>服务器传输超文本到本地游览器的传输协议。其可以提高游览器效率，减少网络传输。</li>
+<li><code>https</code>：以安全为目标的<code>http</code>通道——<code>http</code>的安全版。即<code>http</code>下加入<code>SSL</code>层，<code>https</code>的安全基础是<code>SSL</code>。其主要作用是建立一个信息安全通道，确保数组的传输，确保网站的真实性。</li>
 </ul>
 </li>
 <li><p><code>http</code>和<code>https</code>两者的区别：</p>
@@ -459,6 +460,82 @@
 </li>
 </ul>
 </li>
+</ul>
+<h3 id="2、TCP三次握手"><a href="#2、TCP三次握手" class="headerlink" title="2、TCP三次握手"></a>2、<code>TCP</code>三次握手</h3><ul>
+<li><p>所谓三次握手（Three-Way Handshake）即建立TCP连接，就是指建立一个TCP连接时，需要客户端和服务端总共发送3个包以确认连接的建立。</p>
+</li>
+<li><p><img src="https://s2.ax1x.com/2019/07/25/eelOJS.png" alt="avatar"></p>
+<ul>
+<li>（1）第一次握手：<code>Client</code>将标志位<code>SYN</code>置为1，随机产生一个值<code>seq=J</code>，并将该数据包发送给<code>Server</code>，<code>Client</code>进入<code>SYN_SENT</code>状态，等待<code>Server</code>确认。</li>
+<li>（2）第二次握手：<code>Server</code>收到数据包后由标志位<code>SYN=1</code>知道<code>Client</code>请求建立连接，<code>Server</code>将标志位<code>SYN</code>和<code>ACK</code>都置为1，<code>ack=J+1</code>，随机产生一个值<code>seq=K</code>，并将该数据包发送给<code>Client</code>以确认连接请求，<code>Server</code>进入<code>SYN_RCVD</code>状态。</li>
+<li>（3）第三次握手：<code>Client</code>收到确认后，检查<code>ack</code>是否为<code>J+1</code>，<code>ACK</code>是否为1，如果正确则将标志位<code>ACK</code>置为1，<code>ack=K+1</code>，并将该数据包发送给<code>Server</code>，<code>Server</code>检查<code>ack</code>是否为<code>K+1</code>，<code>ACK</code>是否为1，如果正确则连接建立成功，<code>Client</code>和<code>Server</code>进入<code>ESTABLISHED</code>状态，完成三次握手，随后<code>Client</code>与<code>Server</code>之间可以开始传输数据了。</li>
+</ul>
+</li>
+<li><p>简化三次握手：</p>
+<ul>
+<li><p>假如我们需要加载一张图片</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://s2.ax1x.com/2019/07/16/Z764cF.jpg"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>从图片可以得到三次握手可以简化为：<code>C（Client）</code>发起请求连接<code>S（Server）</code>确认，也发起连接C确认我们再看看每次握手的作用：</p>
+</li>
+<li><p>（1）第一次握手：<code>S</code>只确认自己可以接收<code>C</code>发送的报文端。</p>
+</li>
+<li><p>（2）第二次握手：<code>C</code>可以确认<code>S</code>收到了自己发送的报文段，并且可以确认自己可以接收<code>S</code>发送的报文段。</p>
+</li>
+<li><p>（3）第三次握手：<code>S</code>可以确认<code>C</code>收到了自己发送的报文段。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3、TCP和UDP的区别"><a href="#3、TCP和UDP的区别" class="headerlink" title="3、TCP和UDP的区别"></a>3、<code>TCP</code>和<code>UDP</code>的区别</h3><ul>
+<li><p>（1）<code>TCP</code>是面向连接的，<code>UDP</code>是无连接的即发送数据前不需要先建立链接。</p>
+</li>
+<li><p>（2）<code>TCP</code>提供可靠的服务。也就是说，通过<code>TCP</code>连接传送的数据，无差错，不丢失，不重复，且按序到达；<code>UDP</code>尽最大努力交付，即不保证可靠交付。 并且因为<code>TCP</code>可靠，面向连接，不会丢失数据因此适合大数据量的交换。</p>
+</li>
+<li><p>（3）<code>TCP</code>是面向字节流，<code>UDP</code>面向报文，并且网络出现拥塞不会使得发送速率降低（因此会出现丢包，对实时的应用比如<code>IP</code>电话和视频会议等）。</p>
+</li>
+<li><p>（4）<code>TCP</code>只能是1对1的，<code>UDP</code>支持1对1,1对多。</p>
+</li>
+<li><p>（5）<code>TCP</code>的首部较大为20字节，而<code>UDP</code>只有8字节。</p>
+</li>
+<li><p>（6）<code>TCP</code>是面向连接的可靠性传输，而<code>UDP</code>是不可靠的。</p>
+</li>
+</ul>
+<h3 id="4、WebSocket的实现和应用"><a href="#4、WebSocket的实现和应用" class="headerlink" title="4、WebSocket的实现和应用"></a>4、WebSocket的实现和应用</h3><ul>
+<li><p>什么是<code>WebSocket</code>？</p>
+<ul>
+<li><code>WebSocket</code>是<code>HTML5</code>新增的协议，它的目的是在浏览器和服务器之间建立一个不受限的双向通信的通道，比如说，服务器可以在任意时刻发送消息给浏览器。</li>
+<li><code>http1.0</code>和<code>http1.1</code>都不支持持久性的链接，<code>http1.1</code>中的<code>keep-alive</code>，将多个<code>http</code>请求合并为1个。</li>
+</ul>
+</li>
+<li><p>为什么传统的<code>HTTP</code>协议不能做到<code>WebSocket</code>实现的功能？</p>
+<ul>
+<li>这是因为HTTP协议是一个请求－响应协议，请求必须先由浏览器发给服务器，服务器才能响应这个请求，再把数据发送给浏览器。换句话说，浏览器不主动请求，服务器是没法主动发数据给浏览器的。</li>
+<li><code>HTTP</code>的生命周期通过<code>Request</code>来界定，也就是<code>Request</code>一个<code>Response</code>，那么在<code>Http1.0</code>协议中，这次<code>Http</code>请求就结束了。在<code>Http1.1</code>中进行了改进，有一个<code>connection：Keep-alive</code>，也就是说，在一个<code>Http</code>连接中，可以发送多个<code>Request</code>，接收多个<code>Response</code>。但在<code>Http</code>中一个<code>Request</code>只能对应有一个<code>Response</code>，而且这个<code>Response</code>是被动的，不能主动发起。</li>
+</ul>
+</li>
+<li><p><code>WebSocket</code>是什么样的协议，具体有什么优点？</p>
+<ul>
+<li><p><code>WebSocket</code>是基于<code>Http</code>协议的，或者说借用了<code>Http</code>协议来完成一部分握手，在握手阶段与<code>Http</code>是相同的。我们来看一个<code>websocket</code>握手协议的实现，基本是2个属性，<code>upgrade</code>，<code>connection</code>。</p>
+</li>
+<li><p>基本格式：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">GET ws://localhost:3000/ws/chat HTTP/1.1</span><br><span class="line">Host: localhost</span><br><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br><span class="line">Origin: http://localhost:3000</span><br><span class="line">Sec-WebSocket-Key: client-random-string</span><br><span class="line">Sec-WebSocket-Version: 13</span><br></pre></td></tr></table></figure>
+<ul>
+<li>该请求和普通的HTTP请求有几点不同：<ul>
+<li>GET请求的地址不是类似<code>/path/</code>，而是以<code>ws://</code>开头的地址；</li>
+<li>请求头<code>Upgrade: websocket</code>和<code>Connection: Upgrade</code>表示这个连接将要被转换为WebSocket连接；</li>
+<li><code>Sec-WebSocket-Key</code>是用于标识这个连接，并非用于加密数据；</li>
+<li><code>Sec-WebSocket-Version</code>指定了WebSocket的协议版本。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5、HTTP请求方式"><a href="#5、HTTP请求方式" class="headerlink" title="5、HTTP请求方式"></a>5、<code>HTTP</code>请求方式</h3><ul>
+<li><code>GET</code>：类似于<code>GET</code>请求，只不过服务器响应时不会返回消息体，用户获取报头。</li>
+<li><code>OPTIONS</code>：允许客户端查看服务器的性能，比如说服务器支持的请求的方式等等。</li>
 </ul>
 <big>未完持续</big>
       
@@ -757,7 +834,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#牛客前端面经整理"><span class="nav-number">1.</span> <span class="nav-text">牛客前端面经整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、HTTP-HTML-游览器"><span class="nav-number">1.1.</span> <span class="nav-text">一、HTTP/HTML/游览器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、http-与-https"><span class="nav-number">1.1.1.</span> <span class="nav-text">1、http 与 https</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#牛客前端面经整理"><span class="nav-number">1.</span> <span class="nav-text">牛客前端面经整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、HTTP-HTML-游览器"><span class="nav-number">1.1.</span> <span class="nav-text">一、HTTP/HTML/游览器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、http与-https"><span class="nav-number">1.1.1.</span> <span class="nav-text">1、http与 https</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、TCP三次握手"><span class="nav-number">1.1.2.</span> <span class="nav-text">2、TCP三次握手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、TCP和UDP的区别"><span class="nav-number">1.1.3.</span> <span class="nav-text">3、TCP和UDP的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、WebSocket的实现和应用"><span class="nav-number">1.1.4.</span> <span class="nav-text">4、WebSocket的实现和应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、HTTP请求方式"><span class="nav-number">1.1.5.</span> <span class="nav-text">5、HTTP请求方式</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
