@@ -107,7 +107,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://s2.ax1x.com/2019/07/24/eVCke1.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/07/25/eelOJS.png">
-<meta property="og:updated_time" content="2019-07-25T09:21:44.831Z">
+<meta property="og:updated_time" content="2019-07-26T08:36:12.884Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="牛客前端面经整理">
 <meta name="twitter:description" content="牛客前端面经整理文章出自https://www.nowcoder.com/tutorial/96，本文章只是加上了自己的理解。">
@@ -374,7 +374,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">WordCount:</span>
-           <span class="post-count">2k字</span>
+           <span class="post-count">4.9k字</span>
            
          </span>
 	  
@@ -384,7 +384,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">min2read:</span>
-           <span class="post-count">7分钟</span>
+           <span class="post-count">17分钟</span>
            
          </span>
 
@@ -412,7 +412,7 @@
       
         <h1 id="牛客前端面经整理"><a href="#牛客前端面经整理" class="headerlink" title="牛客前端面经整理"></a>牛客前端面经整理</h1><p>文章出自<a href="https://www.nowcoder.com/tutorial/96" target="_blank" rel="noopener">https://www.nowcoder.com/tutorial/96</a>，本文章只是加上了自己的理解。</p>
 <a id="more"></a>
-<h2 id="一、HTTP-HTML-游览器"><a href="#一、HTTP-HTML-游览器" class="headerlink" title="一、HTTP/HTML/游览器"></a>一、HTTP/HTML/游览器</h2><h3 id="1、http与-https"><a href="#1、http与-https" class="headerlink" title="1、http与 https"></a>1、<code>http</code>与 <code>https</code></h3><ul>
+<h3 id="1、http-与-https"><a href="#1、http-与-https" class="headerlink" title="1、http  与 https"></a>1、http  与 https</h3><ul>
 <li><p>基本概念：</p>
 <ul>
 <li><code>http</code>：超文本传输协议。客户端和服务器端请求和应答的标准(TCP)，用于从<code>WWW</code>服务器传输超文本到本地游览器的传输协议。其可以提高游览器效率，减少网络传输。</li>
@@ -433,7 +433,7 @@
 </li>
 <li><p><code>https</code>协议的工作原理：</p>
 <p><img src="https://s2.ax1x.com/2019/07/24/eVCke1.png" alt="avatar"></p>
-<p>​                                                                            <small>图片来源：<a href="https://juejin.im/post/5c441073e51d455226654d60" target="_blank" rel="noopener">https://juejin.im/post/5c441073e51d455226654d60</a></small></p>
+<p>​                                <small>图片来源：<a href="https://juejin.im/post/5c441073e51d455226654d60" target="_blank" rel="noopener">https://juejin.im/post/5c441073e51d455226654d60</a></small></p>
 <ul>
 <li>客户端使用<code>https url</code>访问服务器，要求<code>web</code>服务器建立<code>SSL</code>链接。</li>
 <li><code>web</code>服务器接口到客户端请求后，将网站的证书（证书中包含了公钥），传输给客户端。</li>
@@ -461,7 +461,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="2、TCP三次握手"><a href="#2、TCP三次握手" class="headerlink" title="2、TCP三次握手"></a>2、<code>TCP</code>三次握手</h3><ul>
+<h3 id="2、TCP-三次握手"><a href="#2、TCP-三次握手" class="headerlink" title="2、TCP 三次握手"></a>2、TCP 三次握手</h3><ul>
 <li><p>所谓三次握手（Three-Way Handshake）即建立TCP连接，就是指建立一个TCP连接时，需要客户端和服务端总共发送3个包以确认连接的建立。</p>
 </li>
 <li><p><img src="https://s2.ax1x.com/2019/07/25/eelOJS.png" alt="avatar"></p>
@@ -487,21 +487,15 @@
 </ul>
 </li>
 </ul>
-<h3 id="3、TCP和UDP的区别"><a href="#3、TCP和UDP的区别" class="headerlink" title="3、TCP和UDP的区别"></a>3、<code>TCP</code>和<code>UDP</code>的区别</h3><ul>
-<li><p>（1）<code>TCP</code>是面向连接的，<code>UDP</code>是无连接的即发送数据前不需要先建立链接。</p>
-</li>
-<li><p>（2）<code>TCP</code>提供可靠的服务。也就是说，通过<code>TCP</code>连接传送的数据，无差错，不丢失，不重复，且按序到达；<code>UDP</code>尽最大努力交付，即不保证可靠交付。 并且因为<code>TCP</code>可靠，面向连接，不会丢失数据因此适合大数据量的交换。</p>
-</li>
-<li><p>（3）<code>TCP</code>是面向字节流，<code>UDP</code>面向报文，并且网络出现拥塞不会使得发送速率降低（因此会出现丢包，对实时的应用比如<code>IP</code>电话和视频会议等）。</p>
-</li>
-<li><p>（4）<code>TCP</code>只能是1对1的，<code>UDP</code>支持1对1,1对多。</p>
-</li>
-<li><p>（5）<code>TCP</code>的首部较大为20字节，而<code>UDP</code>只有8字节。</p>
-</li>
-<li><p>（6）<code>TCP</code>是面向连接的可靠性传输，而<code>UDP</code>是不可靠的。</p>
-</li>
+<h3 id="3、TCP-和-UDP的区别"><a href="#3、TCP-和-UDP的区别" class="headerlink" title="3、TCP 和 UDP的区别"></a>3、TCP 和 UDP的区别</h3><ul>
+<li>（1）<code>TCP</code>是面向连接的，<code>UDP</code>是无连接的即发送数据前不需要先建立链接。</li>
+<li>（2）<code>TCP</code>提供可靠的服务。也就是说，通过<code>TCP</code>连接传送的数据，无差错，不丢失，不重复，且按序到达；<code>UDP</code>尽最大努力交付，即不保证可靠交付。 并且因为<code>TCP</code>可靠，面向连接，不会丢失数据因此适合大数据量的交换。</li>
+<li>（3）<code>TCP</code>是面向字节流，<code>UDP</code>面向报文，并且网络出现拥塞不会使得发送速率降低（因此会出现丢包，对实时的应用比如<code>IP</code>电话和视频会议等）。</li>
+<li>（4）<code>TCP</code>只能是1对1的，<code>UDP</code>支持1对1,1对多。</li>
+<li>（5）<code>TCP</code>的首部较大为20字节，而<code>UDP</code>只有8字节。</li>
+<li>（6）<code>TCP</code>是面向连接的可靠性传输，而<code>UDP</code>是不可靠的。</li>
 </ul>
-<h3 id="4、WebSocket的实现和应用"><a href="#4、WebSocket的实现和应用" class="headerlink" title="4、WebSocket的实现和应用"></a>4、WebSocket的实现和应用</h3><ul>
+<h3 id="4、WebSocket-的实现和应用"><a href="#4、WebSocket-的实现和应用" class="headerlink" title="4、WebSocket 的实现和应用"></a>4、WebSocket 的实现和应用</h3><ul>
 <li><p>什么是<code>WebSocket</code>？</p>
 <ul>
 <li><code>WebSocket</code>是<code>HTML5</code>新增的协议，它的目的是在浏览器和服务器之间建立一个不受限的双向通信的通道，比如说，服务器可以在任意时刻发送消息给浏览器。</li>
@@ -533,11 +527,214 @@
 </ul>
 </li>
 </ul>
-<h3 id="5、HTTP请求方式"><a href="#5、HTTP请求方式" class="headerlink" title="5、HTTP请求方式"></a>5、<code>HTTP</code>请求方式</h3><ul>
+<h3 id="5、HTTP-请求方式"><a href="#5、HTTP-请求方式" class="headerlink" title="5、HTTP 请求方式"></a>5、HTTP 请求方式</h3><ul>
 <li><code>GET</code>：类似于<code>GET</code>请求，只不过服务器响应时不会返回消息体，用户获取报头。</li>
 <li><code>OPTIONS</code>：允许客户端查看服务器的性能，比如说服务器支持的请求的方式等等。</li>
 </ul>
-<big>未完持续</big>
+<h3 id="6、一张图片-url-访问后直接下载怎样实现？-不明"><a href="#6、一张图片-url-访问后直接下载怎样实现？-不明" class="headerlink" title="6、一张图片 url 访问后直接下载怎样实现？(不明)"></a>6、一张图片 url 访问后直接下载怎样实现？(不明)</h3><ul>
+<li><p>请求的返回头里面，用于浏览器解析的重要参数就是OSS的API文档里面的返回http头，决定用户下载行为的参数。</p>
+</li>
+<li><p>下载的情况下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. x-oss-object-type:</span><br><span class="line">        Normal</span><br><span class="line">2. x-oss-request-id:</span><br><span class="line">        598D5ED34F29D01FE2925F41</span><br><span class="line">3. x-oss-storage-class:</span><br><span class="line">        Standard</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="7、web-Quality（无障碍）"><a href="#7、web-Quality（无障碍）" class="headerlink" title="7、web Quality（无障碍）"></a>7、web Quality（无障碍）</h3><ul>
+<li><p>能够被残障人士使用的网站才能称得上一个易用的（易访问的）网站。</p>
+<p>残障人士指的是那些带有残疾或者身体不健康的用户。</p>
+</li>
+<li><p>使用可调节的字体大小</p>
+</li>
+<li><p>使用<code>alt</code>属性</p>
+<ul>
+<li><code>&lt;img src=&quot;images/banana.jpg&quot; alt=&quot;Banana&quot;&gt;</code></li>
+<li>alt 属性允许你为图像（也可以为其它的元素）提供一条相对应的文字。</li>
+<li>有时候浏览器会无法显示图像。具体的原因有：<ul>
+<li>用户关闭了图像显示</li>
+<li>浏览器是不支持图形显示的迷你浏览器</li>
+<li>浏览器是语音浏览器（供盲人和弱视人群使用）</li>
+</ul>
+</li>
+<li>如果您使用了 alt 属性，那么浏览器至少可以显示或读出有关图像的描述。</li>
+</ul>
+</li>
+</ul>
+<h3 id="8、BOM-对象"><a href="#8、BOM-对象" class="headerlink" title="8、BOM 对象"></a>8、BOM 对象</h3><ul>
+<li>什么是<code>BOM</code>对象?<ul>
+<li>游览器对象。</li>
+</ul>
+</li>
+<li>常用的<code>BOM</code>属性：<ul>
+<li><code>location</code>对象<ul>
+<li><code>location.href</code>– 返回或设置当前文档的<code>URL</code></li>
+<li><code>location.search</code> – 返回URL中的查询字符串部分。例如<code>http://www.dreamdu.com/dreamdu.php?id=5&amp;name=dreamdu</code>返回包括(?)后面的内容<code>?id=5&amp;name=dreamdu</code></li>
+<li><code>location.hash</code> – 返回<code>URL</code>#后面的内容，如果没有#，返回空</li>
+<li><code>location.host</code>– 返回<code>URL</code>中的域名部分，例如<code>www.dreamdu.com</code></li>
+<li><code>location.hostname</code> – 返回<code>URL</code>中的主域名部分，例如<code>dreamdu.com</code></li>
+<li><code>location.pathname</code> – 返回<code>URL</code>的域名后的部分。例如 <code>http://www.dreamdu.com/xhtml/</code>返回<code>/xhtml/</code></li>
+<li><code>location.port</code>– 返回URL中的端口部分。例如<code>http://www.dreamdu.com:8080/xhtml/</code> 返回8080</li>
+<li><code>location.protocol</code> – 返回<code>URL</code>中的协议部分。<code>例如 http://www.dreamdu.com:8080/xhtml/</code> 返回(//)前面的内容http:</li>
+<li><code>location.assign</code> – 设置当前文档的<code>URL</code></li>
+<li><code>location.replace()</code> – 设置当前文档的<code>URL</code>，并且在<code>history</code>对象的地址列表中移除这个<code>URL location.replace(url);</code></li>
+<li><code>location.reload()</code> – 重载当前页面</li>
+</ul>
+</li>
+<li><code>history</code>对象<ul>
+<li><code>history.go()</code>– 前进或后退指定的页面数 <code>history.go(num)</code></li>
+<li><code>history.back()</code> – 后退一页</li>
+<li><code>history.forward()</code> – 前进一页</li>
+</ul>
+</li>
+<li><code>Navigator</code>对象<ul>
+<li><code>navigator.userAgent</code> – 返回用户代理头的字符串表示(就是包括浏览器版本信息等的字符串)</li>
+<li><code>navigator.cookieEnabled</code> – 返回浏览器是否支持(启用)<code>cookie</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="9、HTML-drag-api"><a href="#9、HTML-drag-api" class="headerlink" title="9、HTML drag api"></a>9、HTML drag api</h3><ul>
+<li>元素在拖放过程中触发事件：<ul>
+<li><code>dragstart</code>：事件主体是被拖放元素，在开始拖放被拖放元素时触发。</li>
+<li><code>darg</code>：事件主体是被拖放元素，在正在拖放被拖放元素时触发。</li>
+<li><code>dragenter</code>：事件主体是目标元素，在被拖放元素进入某元素时触发。</li>
+<li><code>dragover</code>：事件主体是目标元素，在被拖放在某元素内移动时触发。</li>
+<li><code>dragleave</code>：事件主体是目标元素，在被拖放元素移出目标元素是触发。</li>
+<li><code>drop</code>：事件主体是目标元素，在目标元素完全接受被拖放元素时触发。</li>
+<li><code>dragend</code>：事件主体是被拖放元素，在整个拖放操作结束时触发</li>
+</ul>
+</li>
+</ul>
+<h3 id="10、HTTP2-0"><a href="#10、HTTP2-0" class="headerlink" title="10、HTTP2.0"></a>10、HTTP2.0</h3><ul>
+<li>首先补充一下，<code>http</code>和<code>https</code>的区别，相比于<code>http</code>，<code>https</code>是基于<code>ssl</code>加密的<code>http</code>协议。简要概括：<code>http2.0</code>是基于1999年发布的<code>http1.0</code>之后的首次更新。<ul>
+<li>提升访问速度（可以对于，请求资源所需时间更少，访问速度更快，相比http1.0）</li>
+<li>允许多路复用：多路复用允许同时通过单一的HTTP/2连接发送多重请求-响应信息。改善了：在http1.1中，浏览器客户端在同一时间，针对同一域名下的请求有一定数量限制（连接数量），超过限制会被阻塞。</li>
+<li>二进制分帧：HTTP2.0会将所有的传输信息分割为更小的信息或者帧，并对他们进行二进制编码</li>
+<li>首部压缩</li>
+<li>服务器端推送</li>
+</ul>
+</li>
+</ul>
+<h3 id="11、400、401和403状态码"><a href="#11、400、401和403状态码" class="headerlink" title="11、400、401和403状态码"></a>11、400、401和403状态码</h3><ul>
+<li>400状态码：请求无效<ul>
+<li>产生原因：<ul>
+<li>前端提交数据的字段名称和字段类型与后台的实体没有保持一致</li>
+<li>前端提交到后台的数据应该是json字符串类型，但是前端没有将对象<code>JSON.stringify</code>转化成字符串。</li>
+</ul>
+</li>
+<li>解决方法：<ul>
+<li>对照字段的名称，保持一致性</li>
+<li>将<code>obj</code>对象通过<code>JSON.stringify</code>实现序列化</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>401状态码：当前请求需要用户验证</li>
+<li>403状态码：服务器已经得到请求，但是拒绝执行</li>
+</ul>
+<h3 id="12、fetch"><a href="#12、fetch" class="headerlink" title="12、fetch"></a>12、fetch</h3><ul>
+<li>何为<code>fetch</code><ul>
+<li><code>fetch</code>是<code>web</code>提供的一个可以获取异步资源的<code>api</code>，目前还没有被所有浏览器支持，它提供的<code>api</code>返回的是<code>Promise</code>对象。</li>
+</ul>
+</li>
+<li><code>fetch</code>发送<code>post</code>请求的时候，总是发送2次，第一次状态码是204，第二次才成功？<ul>
+<li>在使用<code>fetch</code>的<code>post</code>请求的时候，导致<code>fetch</code>第一次发送了一个<code>Options</code>请求，询问服务器是否支持修改的请求头，如果服务器支持，则在第二次中发送真正的请求。</li>
+</ul>
+</li>
+</ul>
+<h3 id="13、Cookie、sessionStorage、localStorage-的区别"><a href="#13、Cookie、sessionStorage、localStorage-的区别" class="headerlink" title="13、Cookie、sessionStorage、localStorage 的区别"></a>13、Cookie、sessionStorage、localStorage 的区别</h3><ul>
+<li>共同点：都是保存在浏览器端，并且是同源的。</li>
+<li><code>cookie</code>：<code>cookie</code>数据始终在同源的<code>http</code>请求中携带（即使不需要），即<code>cookie</code>在浏览器和服务器间来回传递。而<code>sessionStorage</code>和<code>localStorage</code>不会自动把数据发给服务器，仅在本地保存。<code>cookie</code>数据还有路径<code>（path）</code>的概念，可以限制<code>cookie</code>只属于某个路径下,存储的大小很小只有4K左右。 （key：可以在浏览器和服务器端来回传递，存储容量小，只有大约4K左右）</li>
+<li><code>sessionStorage</code>：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；<code>localStorage</code>：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据；<code>cookie</code>只在设置的<code>cookie</code>过期时间之前一直有效，即使窗口或浏览器关闭。（key：本身就是一个回话过程，关闭浏览器后消失，<code>session</code>为一个回话，当页面不同即使是同一页面打开两次，也被视为同一次回话）</li>
+<li><p><code>localStorage</code>：<code>localStorage</code>在所有同源窗口中都是共享的；<code>cookie</code>也是在所有同源窗口中都是共享的。（key：同源窗口都会共享，并且不会失效，不管窗口或者浏览器关闭与否都会始终生效）</p>
+</li>
+<li><p>补充说明一下<code>cookie</code>的作用：</p>
+<ul>
+<li>保存用户登录状态。例如将用户id存储于一个<code>cookie</code>内，这样当用户下次访问该页面时就不需要重新登录了，现在很多论坛和社区都提供这样的功能。 <code>cookie</code>还可以设置过期时间，当超过时间期限后，<code>cookie</code>就会自动消失。因此，系统往往可以提示用户保持登录状态的时间：常见选项有一个月、三个 月、一年等。</li>
+<li>跟踪用户行为。例如一个天气预报网站，能够根据用户选择的地区显示当地的天气情况。如果每次都需要选择所在地是烦琐的，当利用了 <code>cookie</code>后就会显得很人性化了，系统能够记住上一次访问的地区，当下次再打开该页面时，它就会自动显示上次用户所在地区的天气情况。因为一切都是在后 台完成，所以这样的页面就像为某个用户所定制的一样，使用起来非常方便</li>
+<li>定制页面。如果网站提供了换肤或更换布局的功能，那么可以使用<code>cookie</code>来记录用户的选项，例如：背景色、分辨率等。当用户下次访问时，仍然可以保存上一次访问的界面风格。</li>
+</ul>
+</li>
+</ul>
+<h3 id="14、web-worker"><a href="#14、web-worker" class="headerlink" title="14、web worker"></a>14、web worker</h3><ul>
+<li>何为<code>web worker</code><ul>
+<li><code>Web Worker</code>的作用，就是为<code>JavaScript</code>创造多线程环境，允许主线程创建 <code>Worker</code> 线程，将一些任务分配给后者运行。在主线程运行的同时，<code>Worker</code> 线程在后台运行，两者互不干扰。等到 <code>Worker</code>线程完成计算任务，再把结果返回给主线程。这样的好处是，一些计算密集型或高延迟的任务，被 <code>Worker</code>线程负担了，主线程（通常负责 <code>UI</code> 交互）就会很流畅，不会被阻塞或拖慢。 </li>
+</ul>
+</li>
+<li>在HTML页面中，如果在执行脚本时，页面的状态是不可相应的，直到脚本执行完成后，页面才变成可相应。<code>web worker</code>是运行在后台的<code>js</code>，独立于其他脚本，不会影响页面你的性能。并且通过<code>postMessage</code>将结果回传到主线程。这样在进行复杂操作的时候，就不会阻塞主线程了。</li>
+<li>如何创建<code>web worker</code><ul>
+<li>检测浏览器对于<code>web worker</code>的支持性</li>
+<li>创建<code>web worker</code>文件（<code>js</code>，回传函数等）</li>
+<li>创建<code>web worker</code>对象</li>
+</ul>
+</li>
+</ul>
+<h3 id="15、HTML-语义化标签"><a href="#15、HTML-语义化标签" class="headerlink" title="15、HTML 语义化标签"></a>15、HTML 语义化标签</h3><ul>
+<li><code>HTML5</code>语义化标签是指正确的标签包含了正确的内容，结构良好，便于阅读，比如<code>nav</code>表示导航条，类似的还有<code>article</code>、<code>header</code>、<code>footer</code>等等标签。</li>
+</ul>
+<h3 id="16、iframe"><a href="#16、iframe" class="headerlink" title="16、iframe"></a>16、iframe</h3><ul>
+<li>何为<code>iframe</code><ul>
+<li><strong>HTML内联框架元素(<iframe>)</iframe></strong> 表示嵌套的<a href="https://developer.mozilla.org/en-US/docs/Glossary/browsing_context" target="_blank" rel="noopener">browsing context</a>。它能够将另一个<code>HTML</code>页面嵌入到当前页面中。</li>
+<li>可以将提示文字放在<iframe></iframe>之间，来提示某些不支持iframe的浏览器</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>会阻塞主页面的<code>onload</code>事件</li>
+<li>搜索引擎无法解读这种页面，不利于<code>SEO</code></li>
+<li><code>iframe</code>和主页面共享连接池，而浏览器对相同区域有限制所以会影响性能。</li>
+</ul>
+</li>
+</ul>
+<h3 id="17、Doctype"><a href="#17、Doctype" class="headerlink" title="17、Doctype"></a>17、Doctype</h3><ul>
+<li><code>Doctype</code>声明于文档最前面，告诉浏览器以何种方式来渲染页面，这里有两种模式，严格模式和混杂模式。</li>
+<li>严格模式的排版和 JS 运作模式是 以该浏览器支持的最高标准运行。</li>
+<li>混杂模式，向后兼容，模拟老式浏览器，防止浏览器无法兼容页面。</li>
+</ul>
+<h3 id="18、Cookie-如何防范-XSS-攻击"><a href="#18、Cookie-如何防范-XSS-攻击" class="headerlink" title="18、Cookie 如何防范 XSS 攻击"></a>18、Cookie 如何防范 XSS 攻击</h3><ul>
+<li><p>XSS（跨站脚本攻击）是指攻击者在返回的<code>HTML</code>中嵌入<code>javascript</code>脚本，为了减轻这些攻击，需要在<code>HTTP</code>头部配上，<code>set-cookies</code>：</p>
+<ul>
+<li><code>httponly</code>-这个属性可以防止<code>XSS</code>,它会禁止<code>javascript</code>脚本来访问<code>cookie</code>。</li>
+<li><code>secure</code>这个属性告诉浏览器仅在请求为<code>https</code>的时候发送<code>cookie</code>。</li>
+</ul>
+<p>结果应该是这样的：Set-Cookie=…..</p>
+</li>
+</ul>
+<h3 id="19、RESTFUL"><a href="#19、RESTFUL" class="headerlink" title="19、RESTFUL"></a>19、RESTFUL</h3><ul>
+<li>就是用URL定位资源，用HTTP描述操作</li>
+</ul>
+<h3 id="20、viewport-和移动端布局"><a href="#20、viewport-和移动端布局" class="headerlink" title="20、viewport 和移动端布局"></a>20、viewport 和移动端布局</h3><ul>
+<li><p>可以参考这篇文章：</p>
+<p><a href="https://github.com/forthealllight/blog/issues/13" target="_blank" rel="noopener">响应式布局的常用解决方案对比(媒体查询、百分比、rem和vw/vh）</a></p>
+</li>
+</ul>
+<h3 id="21、-click在ios上有300ms延迟，原因及如何解决？"><a href="#21、-click在ios上有300ms延迟，原因及如何解决？" class="headerlink" title="21、 click在ios上有300ms延迟，原因及如何解决？"></a>21、 click在ios上有300ms延迟，原因及如何解决？</h3><ul>
+<li><p>原因：</p>
+<ul>
+<li>2007年初，当时的网站都是为大屏设备所涉及的，苹果的设计师为应对<code>iphone</code>整小屏幕游览桌面端站点的问题，即<strong>双击缩放</strong>，游览器为判断用户是否进行了双击操作，<code>ios Safart</code>在用户首次点击屏幕后等待 300 毫秒，以判断用户是否再次点击了屏幕。</li>
+</ul>
+</li>
+<li><p>解决方案：</p>
+<ul>
+<li><p>粗暴型，禁用缩放</p>
+<meta name="viewport" content="width=device-width, user-scalable=no">
+</li>
+<li><p>利用<code>FastClick</code></p>
+<ul>
+<li>检测到<code>touchend</code>事件后，立刻出发模拟<code>click</code>事件，并且把浏览器 300 毫秒之后真正出发的事件给阻断掉</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="21、addEventListener-参数"><a href="#21、addEventListener-参数" class="headerlink" title="21、addEventListener 参数"></a>21、addEventListener 参数</h3><ul>
+<li>addEventListener(event, function, useCapture)<ul>
+<li>其中，<code>event</code>指定事件名；</li>
+<li><code>function</code>指定要事件触发时执行的函数；</li>
+<li><code>useCapture</code>指定事件是否在捕获或冒泡阶段执行。</li>
+</ul>
+</li>
+</ul>
+<p><strong>整理中，未完持续</strong></p>
+
       
     </div>
     
@@ -834,7 +1031,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#牛客前端面经整理"><span class="nav-number">1.</span> <span class="nav-text">牛客前端面经整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、HTTP-HTML-游览器"><span class="nav-number">1.1.</span> <span class="nav-text">一、HTTP/HTML/游览器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、http与-https"><span class="nav-number">1.1.1.</span> <span class="nav-text">1、http与 https</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、TCP三次握手"><span class="nav-number">1.1.2.</span> <span class="nav-text">2、TCP三次握手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、TCP和UDP的区别"><span class="nav-number">1.1.3.</span> <span class="nav-text">3、TCP和UDP的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、WebSocket的实现和应用"><span class="nav-number">1.1.4.</span> <span class="nav-text">4、WebSocket的实现和应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、HTTP请求方式"><span class="nav-number">1.1.5.</span> <span class="nav-text">5、HTTP请求方式</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#牛客前端面经整理"><span class="nav-number">1.</span> <span class="nav-text">牛客前端面经整理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、http-与-https"><span class="nav-number">1.0.1.</span> <span class="nav-text">1、http  与 https</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、TCP-三次握手"><span class="nav-number">1.0.2.</span> <span class="nav-text">2、TCP 三次握手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、TCP-和-UDP的区别"><span class="nav-number">1.0.3.</span> <span class="nav-text">3、TCP 和 UDP的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、WebSocket-的实现和应用"><span class="nav-number">1.0.4.</span> <span class="nav-text">4、WebSocket 的实现和应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、HTTP-请求方式"><span class="nav-number">1.0.5.</span> <span class="nav-text">5、HTTP 请求方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、一张图片-url-访问后直接下载怎样实现？-不明"><span class="nav-number">1.0.6.</span> <span class="nav-text">6、一张图片 url 访问后直接下载怎样实现？(不明)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、web-Quality（无障碍）"><span class="nav-number">1.0.7.</span> <span class="nav-text">7、web Quality（无障碍）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、BOM-对象"><span class="nav-number">1.0.8.</span> <span class="nav-text">8、BOM 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、HTML-drag-api"><span class="nav-number">1.0.9.</span> <span class="nav-text">9、HTML drag api</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10、HTTP2-0"><span class="nav-number">1.0.10.</span> <span class="nav-text">10、HTTP2.0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11、400、401和403状态码"><span class="nav-number">1.0.11.</span> <span class="nav-text">11、400、401和403状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12、fetch"><span class="nav-number">1.0.12.</span> <span class="nav-text">12、fetch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13、Cookie、sessionStorage、localStorage-的区别"><span class="nav-number">1.0.13.</span> <span class="nav-text">13、Cookie、sessionStorage、localStorage 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14、web-worker"><span class="nav-number">1.0.14.</span> <span class="nav-text">14、web worker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15、HTML-语义化标签"><span class="nav-number">1.0.15.</span> <span class="nav-text">15、HTML 语义化标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16、iframe"><span class="nav-number">1.0.16.</span> <span class="nav-text">16、iframe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17、Doctype"><span class="nav-number">1.0.17.</span> <span class="nav-text">17、Doctype</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18、Cookie-如何防范-XSS-攻击"><span class="nav-number">1.0.18.</span> <span class="nav-text">18、Cookie 如何防范 XSS 攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19、RESTFUL"><span class="nav-number">1.0.19.</span> <span class="nav-text">19、RESTFUL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20、viewport-和移动端布局"><span class="nav-number">1.0.20.</span> <span class="nav-text">20、viewport 和移动端布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21、-click在ios上有300ms延迟，原因及如何解决？"><span class="nav-number">1.0.21.</span> <span class="nav-text">21、 click在ios上有300ms延迟，原因及如何解决？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21、addEventListener-参数"><span class="nav-number">1.0.22.</span> <span class="nav-text">21、addEventListener 参数</span></a></li></ol></li></ol></div>
             
 
           </div>
