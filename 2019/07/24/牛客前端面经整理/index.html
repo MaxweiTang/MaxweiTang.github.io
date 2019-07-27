@@ -97,20 +97,22 @@
 
 
 
-<meta name="description" content="牛客前端面经整理文章出自https://www.nowcoder.com/tutorial/96，本文章只是加上了自己的理解。">
+<meta name="description" content="牛客前端面经整理文章出自https://www.nowcoder.com/tutorial/96，本文章只是加上了自己的理解。 最新更新时间：2019-07-27 17:05:30">
 <meta name="keywords" content="Interview">
 <meta property="og:type" content="article">
 <meta property="og:title" content="牛客前端面经整理">
 <meta property="og:url" content="http://yoursite.com/2019/07/24/牛客前端面经整理/index.html">
 <meta property="og:site_name" content="Maxwei`s Blog">
-<meta property="og:description" content="牛客前端面经整理文章出自https://www.nowcoder.com/tutorial/96，本文章只是加上了自己的理解。">
+<meta property="og:description" content="牛客前端面经整理文章出自https://www.nowcoder.com/tutorial/96，本文章只是加上了自己的理解。 最新更新时间：2019-07-27 17:05:30">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://s2.ax1x.com/2019/07/24/eVCke1.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/07/25/eelOJS.png">
-<meta property="og:updated_time" content="2019-07-26T08:39:06.894Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/07/27/eM9d3t.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/07/27/eM9cNj.png">
+<meta property="og:updated_time" content="2019-07-27T09:05:26.767Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="牛客前端面经整理">
-<meta name="twitter:description" content="牛客前端面经整理文章出自https://www.nowcoder.com/tutorial/96，本文章只是加上了自己的理解。">
+<meta name="twitter:description" content="牛客前端面经整理文章出自https://www.nowcoder.com/tutorial/96，本文章只是加上了自己的理解。 最新更新时间：2019-07-27 17:05:30">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/07/24/eVCke1.png">
 
 
@@ -374,7 +376,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">WordCount:</span>
-           <span class="post-count">4.9k字</span>
+           <span class="post-count">8.3k字</span>
            
          </span>
 	  
@@ -384,7 +386,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">min2read:</span>
-           <span class="post-count">17分钟</span>
+           <span class="post-count">30分钟</span>
            
          </span>
 
@@ -411,6 +413,7 @@
 
       
         <h1 id="牛客前端面经整理"><a href="#牛客前端面经整理" class="headerlink" title="牛客前端面经整理"></a>牛客前端面经整理</h1><p>文章出自<a href="https://www.nowcoder.com/tutorial/96" target="_blank" rel="noopener">https://www.nowcoder.com/tutorial/96</a>，本文章只是加上了自己的理解。</p>
+<p>最新更新时间：2019-07-27 17:05:30</p>
 <a id="more"></a>
 <h2 id="一、HTTP-HTML-游览器"><a href="#一、HTTP-HTML-游览器" class="headerlink" title="一、HTTP/HTML/游览器"></a>一、HTTP/HTML/游览器</h2><h3 id="1、http-与-https"><a href="#1、http-与-https" class="headerlink" title="1、http  与 https"></a>1、http  与 https</h3><ul>
 <li><p>基本概念：</p>
@@ -614,22 +617,48 @@
 </ul>
 </li>
 </ul>
-<h3 id="11、400、401和403状态码"><a href="#11、400、401和403状态码" class="headerlink" title="11、400、401和403状态码"></a>11、400、401和403状态码</h3><ul>
-<li>400状态码：请求无效<ul>
-<li>产生原因：<ul>
-<li>前端提交数据的字段名称和字段类型与后台的实体没有保持一致</li>
-<li>前端提交到后台的数据应该是json字符串类型，但是前端没有将对象<code>JSON.stringify</code>转化成字符串。</li>
-</ul>
-</li>
-<li>解决方法：<ul>
-<li>对照字段的名称，保持一致性</li>
-<li>将<code>obj</code>对象通过<code>JSON.stringify</code>实现序列化</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>401状态码：当前请求需要用户验证</li>
-<li>403状态码：服务器已经得到请求，但是拒绝执行</li>
+<h3 id="11、http-返回的状态码"><a href="#11、http-返回的状态码" class="headerlink" title="11、http 返回的状态码"></a>11、http 返回的状态码</h3><ul>
+<li>100    <code>Continue</code> 继续。客户端应继续其请求</li>
+<li>101    <code>Switching Protocols</code>  切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到<code>HTTP</code>的新版本协议</li>
+<li>200    <code>OK</code>  请求成功。一般用于<code>GET</code>与<code>POST</code>请求</li>
+<li>201    <code>Created</code> 已创建。成功请求并创建了新的资源</li>
+<li>202    <code>Accepted</code>    已接受。已经接受请求，但未处理完成</li>
+<li>203    <code>Non-Authoritative Information</code>  非授权信息。请求成功。但返回的<code>meta</code>信息不在原始的服务器，而是一个副本</li>
+<li>204    <code>No Content</code>  无内容。服务器成功处理，但未返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档</li>
+<li>205   <code>Reset Content</code>   重置内容。服务器处理成功，用户终端（例如：浏览器）应重置文档视图。可通过此返回码清除浏览器的表单域</li>
+<li>206    <code>Partial Content</code>  部分内容。服务器成功处理了部分<code>GET</code>请求</li>
+<li>300    <code>Multiple Choices</code>   多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择</li>
+<li>301    <code>Moved Permanently</code>   永久移动。请求的资源已被永久的移动到新URI，返回信息会包括新的URI，浏览器会自动定向到新URI。今后任何新的请求都应使用新的URI代替</li>
+<li>302    <code>Moved Permanently</code>    临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URI</li>
+<li>303    See Other    查看其它地址。与301类似。使用GET和POST请求查看</li>
+<li>304    Not Modified    未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源</li>
+<li>305    Use Proxy    使用代理。所请求的资源必须通过代理访问</li>
+<li>306    Unused    已经被废弃的HTTP状态码</li>
+<li>307    Temporary Redirect    临时重定向。与302类似。使用GET请求重定向</li>
+<li>400    Bad Request    客户端请求的语法错误，服务器无法理解</li>
+<li>401    Unauthorized    请求要求用户的身份认证</li>
+<li>402    Payment Required    保留，将来使用</li>
+<li>403    Forbidden    服务器理解请求客户端的请求，但是拒绝执行此请求</li>
+<li>404    Not Found    服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置”您所请求的资源无法找到”的个性页面</li>
+<li>405    Method Not Allowed    客户端请求中的方法被禁止</li>
+<li>406    Not Acceptable    服务器无法根据客户端请求的内容特性完成请求</li>
+<li>407    Proxy Authentication Required    请求要求代理的身份认证，与401类似，但请求者应当使用代理进行授权</li>
+<li>408    Request Time-out    服务器等待客户端发送的请求时间过长，超时</li>
+<li>409    Conflict    服务器完成客户端的PUT请求是可能返回此代码，服务器处理请求时发生了冲突</li>
+<li>410    Gone    客户端请求的资源已经不存在。410不同于404，如果资源以前有现在被永久删除了可使用410代码，网站设计人员可通过301代码指定资源的新位置</li>
+<li>411    Length Required    服务器无法处理客户端发送的不带Content-Length的请求信息</li>
+<li>412    Precondition Failed    客户端请求信息的先决条件错误</li>
+<li>413    Request Entity Too Large    由于请求的实体过大，服务器无法处理，因此拒绝请求。为防止客户端的连续请求，服务器可能会关闭连接。如果只是服务器暂时无法处理，则会包含一个Retry-After的响应信息</li>
+<li>414    Request-URI Too Large    请求的URI过长（URI通常为网址），服务器无法处理</li>
+<li>415    Unsupported Media Type    服务器无法处理请求附带的媒体格式</li>
+<li>416    Requested range not satisfiable    客户端请求的范围无效</li>
+<li>417    Expectation Failed    服务器无法满足Expect的请求头信息</li>
+<li>500    Internal Server Error    服务器内部错误，无法完成请求</li>
+<li>501    Not Implemented    服务器不支持请求的功能，无法完成请求</li>
+<li>502    Bad Gateway    作为网关或者代理工作的服务器尝试执行请求时，从远程服务器接收到了一个无效的响应</li>
+<li>503    Service Unavailable    由于超载或系统维护，服务器暂时的无法处理客户端的请求。延时的长度可包含在服务器的Retry-After头信息中</li>
+<li>504    Gateway Time-out    充当网关或代理的服务器，未及时从远端服务器获取请</li>
+<li>505    HTTP Version not supported    服务器不支持请求的HTTP协议的版本，无法完成处理</li>
 </ul>
 <h3 id="12、fetch"><a href="#12、fetch" class="headerlink" title="12、fetch"></a>12、fetch</h3><ul>
 <li>何为<code>fetch</code><ul>
@@ -643,19 +672,37 @@
 </ul>
 <h3 id="13、Cookie、sessionStorage、localStorage-的区别"><a href="#13、Cookie、sessionStorage、localStorage-的区别" class="headerlink" title="13、Cookie、sessionStorage、localStorage 的区别"></a>13、Cookie、sessionStorage、localStorage 的区别</h3><ul>
 <li>共同点：都是保存在浏览器端，并且是同源的。</li>
-<li><code>cookie</code>：<code>cookie</code>数据始终在同源的<code>http</code>请求中携带（即使不需要），即<code>cookie</code>在浏览器和服务器间来回传递。而<code>sessionStorage</code>和<code>localStorage</code>不会自动把数据发给服务器，仅在本地保存。<code>cookie</code>数据还有路径<code>（path）</code>的概念，可以限制<code>cookie</code>只属于某个路径下,存储的大小很小只有4K左右。 （key：可以在浏览器和服务器端来回传递，存储容量小，只有大约4K左右）</li>
-<li><code>sessionStorage</code>：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；<code>localStorage</code>：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据；<code>cookie</code>只在设置的<code>cookie</code>过期时间之前一直有效，即使窗口或浏览器关闭。（key：本身就是一个回话过程，关闭浏览器后消失，<code>session</code>为一个回话，当页面不同即使是同一页面打开两次，也被视为同一次回话）</li>
-<li><p><code>localStorage</code>：<code>localStorage</code>在所有同源窗口中都是共享的；<code>cookie</code>也是在所有同源窗口中都是共享的。（key：同源窗口都会共享，并且不会失效，不管窗口或者浏览器关闭与否都会始终生效）</p>
+<li><code>cookie</code>：<ul>
+<li><code>cookie</code>数据始终在同源的<code>http</code>请求中携带（即使不需要），即<code>cookie</code>在浏览器和服务器间来回传递</li>
+<li><code>cookie</code>数据还有路径<code>（path）</code>的概念，可以限制<code>cookie</code>只属于某个路径下</li>
+<li>存储的大小很小只有4K左右，所以<code>cookie</code>只适合保存很小的数据，如回话标志。 （key：可以在浏览器和服务器端来回传递，存储容量小，只有大约4K左右）</li>
+<li><code>cookie</code>只在设置的<code>cookie</code>过期时间之前一直有效，即使窗口或浏览器关闭。（key：本身就是一个回话过程，关闭浏览器后消失，<code>session</code>为一个回话，当页面不同即使是同一页面打开两次，也被视为同一次回话）</li>
+<li>在所有同源窗口中共享的（key：同源窗口都会共享，并且不会失效，不管窗口或者浏览器关闭与否都会始终生效）</li>
+</ul>
 </li>
-<li><p>补充说明一下<code>cookie</code>的作用：</p>
-<ul>
+<li><code>sessionStorage</code>：<ul>
+<li>仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；</li>
+</ul>
+</li>
+<li><code>localStorage</code>：<ul>
+<li><code>localStorage</code>在所有同源窗口中都是共享的；</li>
+<li>始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据</li>
+</ul>
+</li>
+<li>补充说明一下<code>cookie</code>的作用：<ul>
 <li>保存用户登录状态。例如将用户id存储于一个<code>cookie</code>内，这样当用户下次访问该页面时就不需要重新登录了，现在很多论坛和社区都提供这样的功能。 <code>cookie</code>还可以设置过期时间，当超过时间期限后，<code>cookie</code>就会自动消失。因此，系统往往可以提示用户保持登录状态的时间：常见选项有一个月、三个 月、一年等。</li>
 <li>跟踪用户行为。例如一个天气预报网站，能够根据用户选择的地区显示当地的天气情况。如果每次都需要选择所在地是烦琐的，当利用了 <code>cookie</code>后就会显得很人性化了，系统能够记住上一次访问的地区，当下次再打开该页面时，它就会自动显示上次用户所在地区的天气情况。因为一切都是在后 台完成，所以这样的页面就像为某个用户所定制的一样，使用起来非常方便</li>
 <li>定制页面。如果网站提供了换肤或更换布局的功能，那么可以使用<code>cookie</code>来记录用户的选项，例如：背景色、分辨率等。当用户下次访问时，仍然可以保存上一次访问的界面风格。</li>
 </ul>
 </li>
 </ul>
-<h3 id="14、web-worker"><a href="#14、web-worker" class="headerlink" title="14、web worker"></a>14、web worker</h3><ul>
+<h3 id="14、Cookie-与-session-的区别"><a href="#14、Cookie-与-session-的区别" class="headerlink" title="14、Cookie 与 session 的区别"></a>14、Cookie 与 session 的区别</h3><ul>
+<li><code>cookie</code>数据存放在客户的游览器上，<code>session</code>数据放在服务器上。</li>
+<li><code>cookie</code>不是很安全，别人可以分析存放在本地的<code>cookie</code>并进行<code>cookie</code>欺骗。考虑到安全应当使用<code>session</code></li>
+<li><code>session</code>会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能。考虑到减轻服务器性能方面，应当使用<code>cookie</code>。</li>
+<li>单个<code>cookie</code>保存的数据不能超过4k，很多游览器都限制一个站点最多保存20个<code>cookie</code>。</li>
+</ul>
+<h3 id="15、web-worker"><a href="#15、web-worker" class="headerlink" title="15、web worker"></a>15、web worker</h3><ul>
 <li>何为<code>web worker</code><ul>
 <li><code>Web Worker</code>的作用，就是为<code>JavaScript</code>创造多线程环境，允许主线程创建 <code>Worker</code> 线程，将一些任务分配给后者运行。在主线程运行的同时，<code>Worker</code> 线程在后台运行，两者互不干扰。等到 <code>Worker</code>线程完成计算任务，再把结果返回给主线程。这样的好处是，一些计算密集型或高延迟的任务，被 <code>Worker</code>线程负担了，主线程（通常负责 <code>UI</code> 交互）就会很流畅，不会被阻塞或拖慢。 </li>
 </ul>
@@ -668,13 +715,13 @@
 </ul>
 </li>
 </ul>
-<h3 id="15、HTML-语义化标签"><a href="#15、HTML-语义化标签" class="headerlink" title="15、HTML 语义化标签"></a>15、HTML 语义化标签</h3><ul>
+<h3 id="16、HTML-语义化标签"><a href="#16、HTML-语义化标签" class="headerlink" title="16、HTML 语义化标签"></a>16、HTML 语义化标签</h3><ul>
 <li><code>HTML5</code>语义化标签是指正确的标签包含了正确的内容，结构良好，便于阅读，比如<code>nav</code>表示导航条，类似的还有<code>article</code>、<code>header</code>、<code>footer</code>等等标签。</li>
 </ul>
-<h3 id="16、iframe"><a href="#16、iframe" class="headerlink" title="16、iframe"></a>16、iframe</h3><ul>
+<h3 id="17、iframe"><a href="#17、iframe" class="headerlink" title="17、iframe"></a>17、iframe</h3><ul>
 <li>何为<code>iframe</code><ul>
-<li><strong>HTML内联框架元素(<iframe>)</iframe></strong> 表示嵌套的<a href="https://developer.mozilla.org/en-US/docs/Glossary/browsing_context" target="_blank" rel="noopener">browsing context</a>。它能够将另一个<code>HTML</code>页面嵌入到当前页面中。</li>
-<li>可以将提示文字放在<iframe></iframe>之间，来提示某些不支持iframe的浏览器</li>
+<li>HTML内联框架元素(<code>&lt;iframe&gt;</code>) 表示嵌套的<a href="https://developer.mozilla.org/en-US/docs/Glossary/browsing_context" target="_blank" rel="noopener">browsing context</a>。它能够将另一个<code>HTML</code>页面嵌入到当前页面中。</li>
+<li>可以将提示文字放在<code>&lt;iframe&gt;&lt;/iframe&gt;</code>之间，来提示某些不支持iframe的浏览器</li>
 </ul>
 </li>
 <li>缺点：<ul>
@@ -683,13 +730,14 @@
 <li><code>iframe</code>和主页面共享连接池，而浏览器对相同区域有限制所以会影响性能。</li>
 </ul>
 </li>
+<li>iframe 通信，同源和不同源（？）</li>
 </ul>
-<h3 id="17、Doctype"><a href="#17、Doctype" class="headerlink" title="17、Doctype"></a>17、Doctype</h3><ul>
+<h3 id="18、Doctype"><a href="#18、Doctype" class="headerlink" title="18、Doctype"></a>18、Doctype</h3><ul>
 <li><code>Doctype</code>声明于文档最前面，告诉浏览器以何种方式来渲染页面，这里有两种模式，严格模式和混杂模式。</li>
 <li>严格模式的排版和 JS 运作模式是 以该浏览器支持的最高标准运行。</li>
 <li>混杂模式，向后兼容，模拟老式浏览器，防止浏览器无法兼容页面。</li>
 </ul>
-<h3 id="18、Cookie-如何防范-XSS-攻击"><a href="#18、Cookie-如何防范-XSS-攻击" class="headerlink" title="18、Cookie 如何防范 XSS 攻击"></a>18、Cookie 如何防范 XSS 攻击</h3><ul>
+<h3 id="19、Cookie-如何防范-XSS-攻击"><a href="#19、Cookie-如何防范-XSS-攻击" class="headerlink" title="19、Cookie 如何防范 XSS 攻击"></a>19、Cookie 如何防范 XSS 攻击</h3><ul>
 <li><p>XSS（跨站脚本攻击）是指攻击者在返回的<code>HTML</code>中嵌入<code>javascript</code>脚本，为了减轻这些攻击，需要在<code>HTTP</code>头部配上，<code>set-cookies</code>：</p>
 <ul>
 <li><code>httponly</code>-这个属性可以防止<code>XSS</code>,它会禁止<code>javascript</code>脚本来访问<code>cookie</code>。</li>
@@ -698,15 +746,15 @@
 <p>结果应该是这样的：Set-Cookie=…..</p>
 </li>
 </ul>
-<h3 id="19、RESTFUL"><a href="#19、RESTFUL" class="headerlink" title="19、RESTFUL"></a>19、RESTFUL</h3><ul>
+<h3 id="20、RESTFUL"><a href="#20、RESTFUL" class="headerlink" title="20、RESTFUL"></a>20、RESTFUL</h3><ul>
 <li>就是用URL定位资源，用HTTP描述操作</li>
 </ul>
-<h3 id="20、viewport-和移动端布局"><a href="#20、viewport-和移动端布局" class="headerlink" title="20、viewport 和移动端布局"></a>20、viewport 和移动端布局</h3><ul>
+<h3 id="21、viewport-和移动端布局"><a href="#21、viewport-和移动端布局" class="headerlink" title="21、viewport 和移动端布局"></a>21、viewport 和移动端布局</h3><ul>
 <li><p>可以参考这篇文章：</p>
 <p><a href="https://github.com/forthealllight/blog/issues/13" target="_blank" rel="noopener">响应式布局的常用解决方案对比(媒体查询、百分比、rem和vw/vh）</a></p>
 </li>
 </ul>
-<h3 id="21、-click在ios上有300ms延迟，原因及如何解决？"><a href="#21、-click在ios上有300ms延迟，原因及如何解决？" class="headerlink" title="21、 click在ios上有300ms延迟，原因及如何解决？"></a>21、 click在ios上有300ms延迟，原因及如何解决？</h3><ul>
+<h3 id="22、-click在ios上有300ms延迟，原因及如何解决？"><a href="#22、-click在ios上有300ms延迟，原因及如何解决？" class="headerlink" title="22、 click在ios上有300ms延迟，原因及如何解决？"></a>22、 click在ios上有300ms延迟，原因及如何解决？</h3><ul>
 <li><p>原因：</p>
 <ul>
 <li>2007年初，当时的网站都是为大屏设备所涉及的，苹果的设计师为应对<code>iphone</code>整小屏幕游览桌面端站点的问题，即<strong>双击缩放</strong>，游览器为判断用户是否进行了双击操作，<code>ios Safart</code>在用户首次点击屏幕后等待 300 毫秒，以判断用户是否再次点击了屏幕。</li>
@@ -725,11 +773,284 @@
 </ul>
 </li>
 </ul>
-<h3 id="21、addEventListener-参数"><a href="#21、addEventListener-参数" class="headerlink" title="21、addEventListener 参数"></a>21、addEventListener 参数</h3><ul>
+<h3 id="23、addEventListener-参数"><a href="#23、addEventListener-参数" class="headerlink" title="23、addEventListener 参数"></a>23、addEventListener 参数</h3><ul>
 <li>addEventListener(event, function, useCapture)<ul>
 <li>其中，<code>event</code>指定事件名；</li>
 <li><code>function</code>指定要事件触发时执行的函数；</li>
 <li><code>useCapture</code>指定事件是否在捕获或冒泡阶段执行。</li>
+</ul>
+</li>
+</ul>
+<h3 id="24、http-常用请求头"><a href="#24、http-常用请求头" class="headerlink" title="24、http 常用请求头"></a>24、http 常用请求头</h3><p><small>资料来自<a href="https://itbilu.com/other/relate/EJ3fKUwUx.html#http-request-headers" target="_blank" rel="noopener">https://itbilu.com/other/relate/EJ3fKUwUx.html#http-request-headers</a></small></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">协议头</th>
+<th style="text-align:left">说明</th>
+<th style="text-align:left">示例</th>
+<th style="text-align:left">状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Accept</td>
+<td style="text-align:left">可接受的响应内容类型（<code>Content-Types</code>）。</td>
+<td style="text-align:left"><code>Accept: text/plain</code></td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Accept-Charset</td>
+<td style="text-align:left">可接受的字符集</td>
+<td style="text-align:left"><code>Accept-Charset: utf-8</code></td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Accept-Encoding</td>
+<td style="text-align:left">可接受的响应内容的编码方式。</td>
+<td style="text-align:left"><code>Accept-Encoding: gzip, deflate</code></td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Accept-Language</td>
+<td style="text-align:left">可接受的响应内容语言列表。</td>
+<td style="text-align:left"><code>Accept-Language: en-US</code></td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Accept-Datetime</td>
+<td style="text-align:left">可接受的按照时间来表示的响应内容版本</td>
+<td style="text-align:left">Accept-Datetime: Sat, 26 Dec 2015 17:30:00 GMT</td>
+<td style="text-align:left">临时</td>
+</tr>
+<tr>
+<td style="text-align:left">Authorization</td>
+<td style="text-align:left">用于表示HTTP协议中需要认证资源的认证信息</td>
+<td style="text-align:left">Authorization: Basic OSdjJGRpbjpvcGVuIANlc2SdDE==</td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Cache-Control</td>
+<td style="text-align:left">用来指定当前的请求/回复中的，是否使用缓存机制。</td>
+<td style="text-align:left"><code>Cache-Control: no-cache</code></td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Connection</td>
+<td style="text-align:left">客户端（浏览器）想要优先使用的连接类型</td>
+<td style="text-align:left"><code>Connection: keep-alive`</code>Connection: Upgrade`</td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Cookie</td>
+<td style="text-align:left">由之前服务器通过<code>Set-Cookie</code>（见下文）设置的一个HTTP协议Cookie</td>
+<td style="text-align:left"><code>Cookie: $Version=1; Skin=new;</code></td>
+<td style="text-align:left">固定：标准</td>
+</tr>
+<tr>
+<td style="text-align:left">Content-Length</td>
+<td style="text-align:left">以8进制表示的请求体的长度</td>
+<td style="text-align:left"><code>Content-Length: 348</code></td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Content-MD5</td>
+<td style="text-align:left">请求体的内容的二进制 MD5 散列值（数字签名），以 Base64 编码的结果</td>
+<td style="text-align:left">Content-MD5: oD8dH2sgSW50ZWdyaIEd9D==</td>
+<td style="text-align:left">废弃</td>
+</tr>
+<tr>
+<td style="text-align:left">Content-Type</td>
+<td style="text-align:left">请求体的MIME类型 （用于POST和PUT请求中）</td>
+<td style="text-align:left">Content-Type: application/x-www-form-urlencoded</td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Date</td>
+<td style="text-align:left">发送该消息的日期和时间（以<a href="http://tools.ietf.org/html/rfc7231#section-7.1.1.1" target="_blank" rel="noopener">RFC 7231</a>中定义的”HTTP日期”格式来发送）</td>
+<td style="text-align:left">Date: Dec, 26 Dec 2015 17:30:00 GMT</td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Expect</td>
+<td style="text-align:left">表示客户端要求服务器做出特定的行为</td>
+<td style="text-align:left"><code>Expect: 100-continue</code></td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">From</td>
+<td style="text-align:left">发起此请求的用户的邮件地址</td>
+<td style="text-align:left"><code>From: user@itbilu.com</code></td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Host</td>
+<td style="text-align:left">表示服务器的域名以及服务器所监听的端口号。如果所请求的端口是对应的服务的标准端口（80），则端口号可以省略。</td>
+<td style="text-align:left"><code>Host: www.itbilu.com:80`</code>Host: <a href="http://www.itbilu.com`" target="_blank" rel="noopener">www.itbilu.com`</a></td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">If-Match</td>
+<td style="text-align:left">仅当客户端提供的实体与服务器上对应的实体相匹配时，才进行对应的操作。主要用于像 PUT 这样的方法中，仅当从用户上次更新某个资源后，该资源未被修改的情况下，才更新该资源。</td>
+<td style="text-align:left">If-Match: “9jd00cdj34pss9ejqiw39d82f20d0ikd”</td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">If-Modified-Since</td>
+<td style="text-align:left">允许在对应的资源未被修改的情况下返回304未修改</td>
+<td style="text-align:left">If-Modified-Since: Dec, 26 Dec 2015 17:30:00 GMT</td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">If-None-Match</td>
+<td style="text-align:left">允许在对应的内容未被修改的情况下返回304未修改（ 304 Not Modified ），参考 超文本传输协议 的实体标记</td>
+<td style="text-align:left">If-None-Match: “9jd00cdj34pss9ejqiw39d82f20d0ikd”</td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">If-Range</td>
+<td style="text-align:left">如果该实体未被修改过，则向返回所缺少的那一个或多个部分。否则，返回整个新的实体</td>
+<td style="text-align:left">If-Range: “9jd00cdj34pss9ejqiw39d82f20d0ikd”</td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">If-Unmodified-Since</td>
+<td style="text-align:left">仅当该实体自某个特定时间以来未被修改的情况下，才发送回应。</td>
+<td style="text-align:left">If-Unmodified-Since: Dec, 26 Dec 2015 17:30:00 GMT</td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Max-Forwards</td>
+<td style="text-align:left">限制该消息可被代理及网关转发的次数。</td>
+<td style="text-align:left"><code>Max-Forwards: 10</code></td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Origin</td>
+<td style="text-align:left">发起一个针对<a href="http://itbilu.com/javascript/js/VkiXuUcC.html" target="_blank" rel="noopener">跨域资源共享</a>的请求（该请求要求服务器在响应中加入一个<code>Access-Control-Allow-Origin</code>的消息头，表示访问控制所允许的来源）。</td>
+<td style="text-align:left"><code>Origin: http://www.itbilu.com</code></td>
+<td style="text-align:left">固定: 标准</td>
+</tr>
+<tr>
+<td style="text-align:left">Pragma</td>
+<td style="text-align:left">与具体的实现相关，这些字段可能在请求/回应链中的任何时候产生。</td>
+<td style="text-align:left"><code>Pragma: no-cache</code></td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Proxy-Authorization</td>
+<td style="text-align:left">用于向代理进行认证的认证信息。</td>
+<td style="text-align:left">Proxy-Authorization: Basic IOoDZRgDOi0vcGVuIHNlNidJi2==</td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Range</td>
+<td style="text-align:left">表示请求某个实体的一部分，字节偏移以0开始。</td>
+<td style="text-align:left"><code>Range: bytes=500-999</code></td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Referer</td>
+<td style="text-align:left">表示浏览器所访问的前一个页面，可以认为是之前访问页面的链接将浏览器带到了当前页面。<code>Referer</code>其实是<code>Referrer</code>这个单词，但RFC制作标准时给拼错了，后来也就将错就错使用<code>Referer</code>了。</td>
+<td style="text-align:left">Referer: <a href="http://itbilu.com/nodejs" target="_blank" rel="noopener">http://itbilu.com/nodejs</a></td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">TE</td>
+<td style="text-align:left">浏览器预期接受的传输时的编码方式：可使用回应协议头<code>Transfer-Encoding</code>中的值（还可以使用”trailers”表示数据传输时的分块方式）用来表示浏览器希望在最后一个大小为0的块之后还接收到一些额外的字段。</td>
+<td style="text-align:left"><code>TE: trailers,deflate</code></td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">User-Agent</td>
+<td style="text-align:left">浏览器的身份标识字符串</td>
+<td style="text-align:left"><code>User-Agent: Mozilla/……</code></td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Upgrade</td>
+<td style="text-align:left">要求服务器升级到一个高版本协议。</td>
+<td style="text-align:left">Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11</td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Via</td>
+<td style="text-align:left">告诉服务器，这个请求是由哪些代理发出的。</td>
+<td style="text-align:left">Via: 1.0 fred, 1.1 itbilu.com.com (Apache/1.1)</td>
+<td style="text-align:left">固定</td>
+</tr>
+<tr>
+<td style="text-align:left">Warning</td>
+<td style="text-align:left">一个一般性的警告，表示在实体内容体中可能存在错误。</td>
+<td style="text-align:left">Warning: 199 Miscellaneous warning</td>
+<td style="text-align:left">固定</td>
+</tr>
+</tbody>
+</table>
+<h3 id="25、缓存"><a href="#25、缓存" class="headerlink" title="25、缓存"></a>25、缓存</h3><p><small>出自：<a href="https://segmentfault.com/a/1190000008956069" target="_blank" rel="noopener">https://segmentfault.com/a/1190000008956069</a></small></p>
+<ul>
+<li><p>浏览器缓存是浏览器在本地磁盘对用户最近请求过的文档进行存储，当访问者再次访问同一页面时，浏览器就可以直接从本地磁盘加载文档。</p>
+</li>
+<li><p>所以根据上面的特点，浏览器缓存有下面的优点：</p>
+<ol>
+<li>减少冗余的数据传输</li>
+<li>减少服务器负担</li>
+<li>加快客户端加载网页的速度</li>
+</ol>
+</li>
+<li><p>游览器缓存过程：</p>
+<ul>
+<li><p>在浏览器第一次发起请求时，本地无缓存，向web服务器发送请求，服务器起端响应请求，浏览器端缓存。过程如下：</p>
+<p><img src="https://s2.ax1x.com/2019/07/27/eM9d3t.png" alt="avatar"></p>
+</li>
+<li><p>在第一次请求时，服务器会将页面最后修改时间通过<code>Last-Modified</code>标识由服务器发送给客户端，客户端记录修改时间；服务器还会生成一个Etag，并发送给客户端。</p>
+</li>
+<li><p>游览器后续再次进行请求时：</p>
+<p><img src="https://s2.ax1x.com/2019/07/27/eM9cNj.png" alt="avatar"></p>
+</li>
+<li><p>浏览器缓存主要分为强<strong>强缓存</strong>（也称<strong>本地缓存</strong>）和<strong>协商缓存</strong>（也称<strong>弱缓存</strong>）。根据上图，浏览器在第一次请求发生后，再次发送请求时：</p>
+<ul>
+<li>浏览器请求某一资源时，会先获取该资源缓存的header信息，然后根据header中的<code>Cache-Control</code>和<code>Expires</code>来判断是否过期。若没过期则直接从缓存中获取资源信息，包括缓存的header的信息，所以此次请求不会与服务器进行通信。这里判断是否过期，则是<strong>强缓存</strong>相关。与<code>Cache-Control</code>和<code>Expires</code>相关。</li>
+<li>如果显示已过期，浏览器会向服务器端发送请求，这个请求会携带第一次请求返回的有关缓存的header字段信息，比如客户端会通过<code>If-None-Match</code>头将先前服务器端发送过来的Etag发送给服务器，服务会对比这个客户端发过来的Etag是否与服务器的相同，若相同，就将<code>If-None-Match</code>的值设为false，返回状态304，客户端继续使用本地缓存，不解析服务器端发回来的数据，若不相同就将<code>If-None-Match</code>的值设为true，返回状态为200，客户端重新机械服务器端返回的数据；客户端还会通过<code>If-Modified-Since</code>头将先前服务器端发过来的最后修改时间戳发送给服务器，服务器端通过这个时间戳判断客户端的页面是否是最新的，如果不是最新的，则返回最新的内容，如果是最新的，则返回304，客户端继续使用本地缓存。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>缓存分为两种：强缓存和协商缓存，根据响应的<code>header</code>内容来决定。</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>获取资源形式</th>
+<th>状态码</th>
+<th>发送请求到服务器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>强缓存</td>
+<td>从缓存取</td>
+<td>200（from cache）</td>
+<td>否，直接从缓存取</td>
+</tr>
+<tr>
+<td>协商缓存</td>
+<td>从缓存取</td>
+<td>304（not modified）</td>
+<td>是，通过服务器来告知缓存是否可用</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>强缓存：<ul>
+<li>强缓存是利用http头中的<code>Expires</code>和<code>Cache-Control</code>两个字段来控制的，用来表示资源的缓存时间。强缓存中，普通刷新会忽略它，但不会清除它，需要强制刷新。浏览器强制刷新，请求会带上<code>Cache-Control:no-cache</code>和<code>Pragma:no-cache</code></li>
+</ul>
+</li>
+<li>协调缓存：<ul>
+<li>协商缓存就是由服务器来确定缓存资源是否可用，所以客户端与服务器端要通过某种标识来进行通信，从而让服务器判断请求资源是否可以缓存访问。</li>
+<li><strong>普通刷新会启用弱缓存，忽略强缓存。只有在地址栏或收藏夹输入网址、通过链接引用资源等情况下，浏览器才会启用强缓存</strong>，这也是为什么有时候我们更新一张图片、一个js文件，页面内容依然是旧的，但是直接浏览器访问那个图片或文件，看到的内容却是新的。</li>
+<li>这个主要涉及到两组header字段：<code>Etag</code>和<code>If-None-Match</code>、<code>Last-Modified</code>和<code>If-Modified-Since</code>。</li>
 </ul>
 </li>
 </ul>
@@ -1031,7 +1352,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#牛客前端面经整理"><span class="nav-number">1.</span> <span class="nav-text">牛客前端面经整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、HTTP-HTML-游览器"><span class="nav-number">1.1.</span> <span class="nav-text">一、HTTP/HTML/游览器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、http-与-https"><span class="nav-number">1.1.1.</span> <span class="nav-text">1、http  与 https</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、TCP-三次握手"><span class="nav-number">1.1.2.</span> <span class="nav-text">2、TCP 三次握手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、TCP-和-UDP的区别"><span class="nav-number">1.1.3.</span> <span class="nav-text">3、TCP 和 UDP的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、WebSocket-的实现和应用"><span class="nav-number">1.1.4.</span> <span class="nav-text">4、WebSocket 的实现和应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、HTTP-请求方式"><span class="nav-number">1.1.5.</span> <span class="nav-text">5、HTTP 请求方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、一张图片-url-访问后直接下载怎样实现？-不明"><span class="nav-number">1.1.6.</span> <span class="nav-text">6、一张图片 url 访问后直接下载怎样实现？(不明)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、web-Quality（无障碍）"><span class="nav-number">1.1.7.</span> <span class="nav-text">7、web Quality（无障碍）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、BOM-对象"><span class="nav-number">1.1.8.</span> <span class="nav-text">8、BOM 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、HTML-drag-api"><span class="nav-number">1.1.9.</span> <span class="nav-text">9、HTML drag api</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10、HTTP2-0"><span class="nav-number">1.1.10.</span> <span class="nav-text">10、HTTP2.0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11、400、401和403状态码"><span class="nav-number">1.1.11.</span> <span class="nav-text">11、400、401和403状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12、fetch"><span class="nav-number">1.1.12.</span> <span class="nav-text">12、fetch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13、Cookie、sessionStorage、localStorage-的区别"><span class="nav-number">1.1.13.</span> <span class="nav-text">13、Cookie、sessionStorage、localStorage 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14、web-worker"><span class="nav-number">1.1.14.</span> <span class="nav-text">14、web worker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15、HTML-语义化标签"><span class="nav-number">1.1.15.</span> <span class="nav-text">15、HTML 语义化标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16、iframe"><span class="nav-number">1.1.16.</span> <span class="nav-text">16、iframe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17、Doctype"><span class="nav-number">1.1.17.</span> <span class="nav-text">17、Doctype</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18、Cookie-如何防范-XSS-攻击"><span class="nav-number">1.1.18.</span> <span class="nav-text">18、Cookie 如何防范 XSS 攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19、RESTFUL"><span class="nav-number">1.1.19.</span> <span class="nav-text">19、RESTFUL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20、viewport-和移动端布局"><span class="nav-number">1.1.20.</span> <span class="nav-text">20、viewport 和移动端布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21、-click在ios上有300ms延迟，原因及如何解决？"><span class="nav-number">1.1.21.</span> <span class="nav-text">21、 click在ios上有300ms延迟，原因及如何解决？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21、addEventListener-参数"><span class="nav-number">1.1.22.</span> <span class="nav-text">21、addEventListener 参数</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#牛客前端面经整理"><span class="nav-number">1.</span> <span class="nav-text">牛客前端面经整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、HTTP-HTML-游览器"><span class="nav-number">1.1.</span> <span class="nav-text">一、HTTP/HTML/游览器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、http-与-https"><span class="nav-number">1.1.1.</span> <span class="nav-text">1、http  与 https</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、TCP-三次握手"><span class="nav-number">1.1.2.</span> <span class="nav-text">2、TCP 三次握手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、TCP-和-UDP的区别"><span class="nav-number">1.1.3.</span> <span class="nav-text">3、TCP 和 UDP的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、WebSocket-的实现和应用"><span class="nav-number">1.1.4.</span> <span class="nav-text">4、WebSocket 的实现和应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、HTTP-请求方式"><span class="nav-number">1.1.5.</span> <span class="nav-text">5、HTTP 请求方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、一张图片-url-访问后直接下载怎样实现？-不明"><span class="nav-number">1.1.6.</span> <span class="nav-text">6、一张图片 url 访问后直接下载怎样实现？(不明)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、web-Quality（无障碍）"><span class="nav-number">1.1.7.</span> <span class="nav-text">7、web Quality（无障碍）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、BOM-对象"><span class="nav-number">1.1.8.</span> <span class="nav-text">8、BOM 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、HTML-drag-api"><span class="nav-number">1.1.9.</span> <span class="nav-text">9、HTML drag api</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10、HTTP2-0"><span class="nav-number">1.1.10.</span> <span class="nav-text">10、HTTP2.0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11、http-返回的状态码"><span class="nav-number">1.1.11.</span> <span class="nav-text">11、http 返回的状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12、fetch"><span class="nav-number">1.1.12.</span> <span class="nav-text">12、fetch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13、Cookie、sessionStorage、localStorage-的区别"><span class="nav-number">1.1.13.</span> <span class="nav-text">13、Cookie、sessionStorage、localStorage 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14、Cookie-与-session-的区别"><span class="nav-number">1.1.14.</span> <span class="nav-text">14、Cookie 与 session 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15、web-worker"><span class="nav-number">1.1.15.</span> <span class="nav-text">15、web worker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16、HTML-语义化标签"><span class="nav-number">1.1.16.</span> <span class="nav-text">16、HTML 语义化标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17、iframe"><span class="nav-number">1.1.17.</span> <span class="nav-text">17、iframe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18、Doctype"><span class="nav-number">1.1.18.</span> <span class="nav-text">18、Doctype</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19、Cookie-如何防范-XSS-攻击"><span class="nav-number">1.1.19.</span> <span class="nav-text">19、Cookie 如何防范 XSS 攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20、RESTFUL"><span class="nav-number">1.1.20.</span> <span class="nav-text">20、RESTFUL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21、viewport-和移动端布局"><span class="nav-number">1.1.21.</span> <span class="nav-text">21、viewport 和移动端布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22、-click在ios上有300ms延迟，原因及如何解决？"><span class="nav-number">1.1.22.</span> <span class="nav-text">22、 click在ios上有300ms延迟，原因及如何解决？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23、addEventListener-参数"><span class="nav-number">1.1.23.</span> <span class="nav-text">23、addEventListener 参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24、http-常用请求头"><span class="nav-number">1.1.24.</span> <span class="nav-text">24、http 常用请求头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#25、缓存"><span class="nav-number">1.1.25.</span> <span class="nav-text">25、缓存</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
