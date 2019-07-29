@@ -111,7 +111,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/07/27/eM9cNj.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/07/28/elWXLV.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/07/28/elf1yt.png">
-<meta property="og:updated_time" content="2019-07-28T09:22:39.551Z">
+<meta property="og:updated_time" content="2019-07-29T07:28:32.674Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="牛客前端面经整理">
 <meta name="twitter:description" content="牛客前端面经整理文章出自https://www.nowcoder.com/tutorial/96，本文章只是加上了自己的理解。 最新更新时间：2019-07-28 17:29:20">
@@ -378,7 +378,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">WordCount:</span>
-           <span class="post-count">9k字</span>
+           <span class="post-count">10.2k字</span>
            
          </span>
 	  
@@ -388,7 +388,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">min2read:</span>
-           <span class="post-count">33分钟</span>
+           <span class="post-count">37分钟</span>
            
          </span>
 
@@ -628,6 +628,12 @@
 <li>服务器端推送</li>
 </ul>
 </li>
+<li>特征：<ul>
+<li>内容安全，应为http2.0是基于https的，天然具有安全特性，通过http2.0的特性可以避免单纯使用https的性能下降。</li>
+<li>二进制格式，http1.X的解析是基于文本的，http2.0将所有的传输信息分割为更小的消息和帧，并对他们采用二进制格式编码，基于二进制可以让协议有更多的扩展性，比如引入了帧来传输数据和指令。</li>
+<li>多路复用，这个功能相当于是长连接的增强，每个request请求可以随机的混杂在一起，接收方可以根据request的id将request再归属到各自不同的服务端请求里面，另外多路复用中也支持了流的优先级，允许客户端告诉服务器那些内容是更优先级的资源，可以优先传输。</li>
+</ul>
+</li>
 </ul>
 <h3 id="11、http-返回的状态码"><a href="#11、http-返回的状态码" class="headerlink" title="11、http 返回的状态码"></a>11、http 返回的状态码</h3><ul>
 <li>100    <code>Continue</code> 继续。客户端应继续其请求</li>
@@ -683,8 +689,10 @@
 </li>
 </ul>
 <h3 id="13、Cookie、sessionStorage、localStorage-的区别"><a href="#13、Cookie、sessionStorage、localStorage-的区别" class="headerlink" title="13、Cookie、sessionStorage、localStorage 的区别"></a>13、Cookie、sessionStorage、localStorage 的区别</h3><ul>
-<li>共同点：都是保存在浏览器端，并且是同源的。</li>
-<li><code>cookie</code>：<ul>
+<li><p>共同点：都是保存在浏览器端，并且是同源的。</p>
+</li>
+<li><p><code>cookie</code>：</p>
+<ul>
 <li><code>cookie</code>数据始终在同源的<code>http</code>请求中携带（即使不需要），即<code>cookie</code>在浏览器和服务器间来回传递</li>
 <li><code>cookie</code>数据还有路径<code>（path）</code>的概念，可以限制<code>cookie</code>只属于某个路径下</li>
 <li>存储的大小很小只有4K左右，所以<code>cookie</code>只适合保存很小的数据，如回话标志。 （key：可以在浏览器和服务器端来回传递，存储容量小，只有大约4K左右）</li>
@@ -692,20 +700,26 @@
 <li>在所有同源窗口中共享的（key：同源窗口都会共享，并且不会失效，不管窗口或者浏览器关闭与否都会始终生效）</li>
 </ul>
 </li>
-<li><code>sessionStorage</code>：<ul>
+<li><p><code>sessionStorage</code>：</p>
+<ul>
 <li>仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；</li>
 </ul>
 </li>
-<li><code>localStorage</code>：<ul>
+<li><p><code>localStorage</code>：</p>
+<ul>
 <li><code>localStorage</code>在所有同源窗口中都是共享的；</li>
 <li>始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据</li>
 </ul>
 </li>
-<li>补充说明一下<code>cookie</code>的作用：<ul>
+<li><p>补充说明一下<code>cookie</code>的作用：</p>
+<ul>
 <li>保存用户登录状态。例如将用户id存储于一个<code>cookie</code>内，这样当用户下次访问该页面时就不需要重新登录了，现在很多论坛和社区都提供这样的功能。 <code>cookie</code>还可以设置过期时间，当超过时间期限后，<code>cookie</code>就会自动消失。因此，系统往往可以提示用户保持登录状态的时间：常见选项有一个月、三个 月、一年等。</li>
 <li>跟踪用户行为。例如一个天气预报网站，能够根据用户选择的地区显示当地的天气情况。如果每次都需要选择所在地是烦琐的，当利用了 <code>cookie</code>后就会显得很人性化了，系统能够记住上一次访问的地区，当下次再打开该页面时，它就会自动显示上次用户所在地区的天气情况。因为一切都是在后 台完成，所以这样的页面就像为某个用户所定制的一样，使用起来非常方便</li>
 <li>定制页面。如果网站提供了换肤或更换布局的功能，那么可以使用<code>cookie</code>来记录用户的选项，例如：背景色、分辨率等。当用户下次访问时，仍然可以保存上一次访问的界面风格。</li>
 </ul>
+</li>
+<li><p>应用场景：</p>
+<p>从安全性来说，因为每次http请求都回携带cookie信息，这样子浪费了带宽，所以cookie应该尽可能的少用，此外cookie还需要指定作用域，不可以跨域调用，限制很多，但是用户识别用户登陆来说，cookie还是比storage好用，其他情况下可以用storage，localstorage可以用来在页面传递参数，sessionstorage可以用来保存一些临时的数据，防止用户刷新页面后丢失了一些参数。</p>
 </li>
 </ul>
 <h3 id="14、Cookie-与-session-的区别"><a href="#14、Cookie-与-session-的区别" class="headerlink" title="14、Cookie 与 session 的区别"></a>14、Cookie 与 session 的区别</h3><ul>
@@ -1066,6 +1080,12 @@
 </ul>
 </li>
 </ul>
+<ul>
+<li>cache-control 的值有哪些<ul>
+<li>cache-control是一个通用消息头字段被用于HTTP请求和响应中，通过指定指令来实现缓存机制，这个缓存指令是单向的，常见的取值有private、no-cache、max-age、must-revalidate等，默认为private。</li>
+</ul>
+</li>
+</ul>
 <h3 id="26、前端优化"><a href="#26、前端优化" class="headerlink" title="26、前端优化"></a>26、前端优化</h3><ul>
 <li>降低请求量：合并资源，减少<code>HTTP</code>请求数，<code>minify/gzip</code>压缩，<code>webP</code>，<code>lazyLoad</code>。</li>
 <li>加快请求速度：预解析<code>DNS</code>，减少域名数，并行加载，<code>CDN</code>分发。</li>
@@ -1088,6 +1108,45 @@
 <p><img src="https://s2.ax1x.com/2019/07/28/elf1yt.png" alt="avatar"></p>
 <h3 id="28、HTML5-新增元素"><a href="#28、HTML5-新增元素" class="headerlink" title="28、HTML5 新增元素"></a>28、HTML5 新增元素</h3><ul>
 <li>首先html5为了更好的实践<code>web</code>语义化，增加了<code>header</code>，<code>footer</code>，<code>nav</code>,<code>aside</code>,<code>section</code>等语义化标签，在表单方面，为了增强表单，为<code>input</code>增加了<code>color</code>，<code>emial</code>,<code>data</code>,<code>range</code>等类型，在存储方面，提供了<code>sessionStorage</code>，<code>localStorage</code>和离线存储，通过这些存储方式方便数据在客户端的存储和获取，在多媒体方面规定了音频和视频元素<code>audio</code>和<code>vedio</code>，另外还有地理定位，<code>canvas</code>画布，拖放，多线程编程的<code>web worker</code>和<code>websocket</code>协议</li>
+</ul>
+<h3 id="29、在地址栏里输入一个-URL，到这个页面呈现出来，中间会发生什么？"><a href="#29、在地址栏里输入一个-URL，到这个页面呈现出来，中间会发生什么？" class="headerlink" title="29、在地址栏里输入一个 URL，到这个页面呈现出来，中间会发生什么？"></a>29、在地址栏里输入一个 URL，到这个页面呈现出来，中间会发生什么？</h3><p>输入<code>URL</code>后：</p>
+<ul>
+<li>找到这个<code>URL</code>域名的服务器<code>ip</code><ul>
+<li>游览器首先会寻找缓存，查看缓存中是否有记录。<ul>
+<li>缓存的查找：游览器缓存 -&gt; 系统缓存 -&gt; 路由器缓存。</li>
+</ul>
+</li>
+<li>缓存中没有则查找系统的<code>hosts</code>文件中是否有记录。</li>
+<li>如果都没有则查询<code>DNS</code>服务器。</li>
+</ul>
+</li>
+<li>得到服务器<code>ip</code>地址后，游览器根据这个<code>ip</code>以及相对应的端口号构建一个<code>http</code>请求。<ul>
+<li>这个请求报文会包括：<ul>
+<li>这次请求的信息。主要是请求方法。</li>
+<li>请求说明和请求附带的数据。</li>
+<li>并将这个<code>http</code>请求封装在一个<code>tcp</code>包中。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>这个<code>tcp</code>包会依次经过传输层、网络层、数据链路层、物理层到达服务器。</li>
+<li>服务器解析这个请求来做出响应，返回相应的<code>html</code>给游览器。</li>
+<li>由于<code>html</code>是一个树形结构，游览器根据这个<code>html</code>来构建<code>DOM</code>树。<ul>
+<li>在<code>DOM</code>数的构建过程中如果遇到<code>JS</code>脚本和外部<code>JS</code>连接，则会定制构建<code>DOM</code>数来执行和下载相对应的代码，这会造成阻塞。（这就是为什么推荐<code>JS</code>代码应该放在<code>html</code>代码的后面）。</li>
+</ul>
+</li>
+<li>之后根据外部样式、内部样式、内联样式构建一个<code>CSS</code>对象模型树<code>CSSOM</code>数。</li>
+<li>构建完成后和<code>DOM</code>数合并为渲染树。这里主要做的事排除非视觉节点，如<code>script、meta</code>标签和排除<code>display</code>为<code>none</code>的节点。</li>
+<li>之后进行布局。布局主要是确定各个元素的位置和尺寸。</li>
+<li>之后是渲染界面。由于<code>html</code>文件中会含有图片、视频和音频等资源，在解析<code>DOM</code>的过程中遇到这些都会进行并行下载，游览器对每个域的并行下载数量有一定的限制，一般是 4-6 个。</li>
+<li>当然在这些所有的请求中还需要关注的就是缓存，缓存一般通过<code>Cache-Control、Last-Modify、Expires</code>等首部字段控制。 <code>Cache-Control</code>和<code>Expires</code>的区别在于<code>Cache-Control</code>使用相对时间，<code>Expires</code>使用的是基于服务器 端的绝对时间，因为存在时差问题，一般采用<code>Cache-Control</code>，在请求这些有设置了缓存的数据时，会先 查看是否过期，如果没有过期则直接使用本地缓存，过期则请求并在服务器校验文件是否修改，如果上一次 响应设置了<code>ETag</code>值会在这次请求的时候作为<code>If-None-Match</code>的值交给服务器校验，如果一致，继续校验 <code>Last-Modified</code>，没有设置<code>ETag</code>则直接验证<code>Last-Modified</code>，再决定是否返回304</li>
+</ul>
+<h3 id="30、游览器在生成页面的时候，会生成那两颗树"><a href="#30、游览器在生成页面的时候，会生成那两颗树" class="headerlink" title="30、游览器在生成页面的时候，会生成那两颗树"></a>30、游览器在生成页面的时候，会生成那两颗树</h3><ul>
+<li>构造两棵树：<code>DOM</code>树、<code>CSSOM</code>规则树<ul>
+<li>当游览器接收到服务器响应来的<code>HTML</code>文档后，会遍历文档节点，生成<code>DOM</code>树。</li>
+<li><code>CSSOM</code>规则树由游览器解析<code>CSS</code>文件生成。</li>
+</ul>
+</li>
 </ul>
 <p><strong>整理中，未完持续</strong></p>
 
@@ -1387,7 +1446,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#牛客前端面经整理"><span class="nav-number">1.</span> <span class="nav-text">牛客前端面经整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、HTTP-HTML-游览器"><span class="nav-number">1.1.</span> <span class="nav-text">一、HTTP/HTML/游览器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、http-与-https"><span class="nav-number">1.1.1.</span> <span class="nav-text">1、http  与 https</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、TCP-三次握手"><span class="nav-number">1.1.2.</span> <span class="nav-text">2、TCP 三次握手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、TCP-和-UDP的区别"><span class="nav-number">1.1.3.</span> <span class="nav-text">3、TCP 和 UDP的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、WebSocket-的实现和应用"><span class="nav-number">1.1.4.</span> <span class="nav-text">4、WebSocket 的实现和应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、HTTP-请求方式"><span class="nav-number">1.1.5.</span> <span class="nav-text">5、HTTP 请求方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、一张图片-url-访问后直接下载怎样实现？-不明"><span class="nav-number">1.1.6.</span> <span class="nav-text">6、一张图片 url 访问后直接下载怎样实现？(不明)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、web-Quality（无障碍）"><span class="nav-number">1.1.7.</span> <span class="nav-text">7、web Quality（无障碍）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、BOM-对象"><span class="nav-number">1.1.8.</span> <span class="nav-text">8、BOM 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、HTML-drag-api"><span class="nav-number">1.1.9.</span> <span class="nav-text">9、HTML drag api</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10、HTTP2-0"><span class="nav-number">1.1.10.</span> <span class="nav-text">10、HTTP2.0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11、http-返回的状态码"><span class="nav-number">1.1.11.</span> <span class="nav-text">11、http 返回的状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12、fetch"><span class="nav-number">1.1.12.</span> <span class="nav-text">12、fetch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13、Cookie、sessionStorage、localStorage-的区别"><span class="nav-number">1.1.13.</span> <span class="nav-text">13、Cookie、sessionStorage、localStorage 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14、Cookie-与-session-的区别"><span class="nav-number">1.1.14.</span> <span class="nav-text">14、Cookie 与 session 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15、web-worker"><span class="nav-number">1.1.15.</span> <span class="nav-text">15、web worker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16、HTML-语义化标签"><span class="nav-number">1.1.16.</span> <span class="nav-text">16、HTML 语义化标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17、iframe"><span class="nav-number">1.1.17.</span> <span class="nav-text">17、iframe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18、Doctype"><span class="nav-number">1.1.18.</span> <span class="nav-text">18、Doctype</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19、Cookie-如何防范-XSS-攻击"><span class="nav-number">1.1.19.</span> <span class="nav-text">19、Cookie 如何防范 XSS 攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20、RESTFUL"><span class="nav-number">1.1.20.</span> <span class="nav-text">20、RESTFUL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21、viewport-和移动端布局"><span class="nav-number">1.1.21.</span> <span class="nav-text">21、viewport 和移动端布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22、-click在ios上有300ms延迟，原因及如何解决？"><span class="nav-number">1.1.22.</span> <span class="nav-text">22、 click在ios上有300ms延迟，原因及如何解决？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23、addEventListener-参数"><span class="nav-number">1.1.23.</span> <span class="nav-text">23、addEventListener 参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24、http-常用请求头"><span class="nav-number">1.1.24.</span> <span class="nav-text">24、http 常用请求头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#25、缓存"><span class="nav-number">1.1.25.</span> <span class="nav-text">25、缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#26、前端优化"><span class="nav-number">1.1.26.</span> <span class="nav-text">26、前端优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#27、如何画一个三角形"><span class="nav-number">1.1.27.</span> <span class="nav-text">27、如何画一个三角形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#28、HTML5-新增元素"><span class="nav-number">1.1.28.</span> <span class="nav-text">28、HTML5 新增元素</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#牛客前端面经整理"><span class="nav-number">1.</span> <span class="nav-text">牛客前端面经整理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、HTTP-HTML-游览器"><span class="nav-number">1.1.</span> <span class="nav-text">一、HTTP/HTML/游览器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、http-与-https"><span class="nav-number">1.1.1.</span> <span class="nav-text">1、http  与 https</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、TCP-三次握手"><span class="nav-number">1.1.2.</span> <span class="nav-text">2、TCP 三次握手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、TCP-和-UDP的区别"><span class="nav-number">1.1.3.</span> <span class="nav-text">3、TCP 和 UDP的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、WebSocket-的实现和应用"><span class="nav-number">1.1.4.</span> <span class="nav-text">4、WebSocket 的实现和应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、HTTP-请求方式"><span class="nav-number">1.1.5.</span> <span class="nav-text">5、HTTP 请求方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、一张图片-url-访问后直接下载怎样实现？-不明"><span class="nav-number">1.1.6.</span> <span class="nav-text">6、一张图片 url 访问后直接下载怎样实现？(不明)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、web-Quality（无障碍）"><span class="nav-number">1.1.7.</span> <span class="nav-text">7、web Quality（无障碍）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、BOM-对象"><span class="nav-number">1.1.8.</span> <span class="nav-text">8、BOM 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、HTML-drag-api"><span class="nav-number">1.1.9.</span> <span class="nav-text">9、HTML drag api</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10、HTTP2-0"><span class="nav-number">1.1.10.</span> <span class="nav-text">10、HTTP2.0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11、http-返回的状态码"><span class="nav-number">1.1.11.</span> <span class="nav-text">11、http 返回的状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12、fetch"><span class="nav-number">1.1.12.</span> <span class="nav-text">12、fetch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13、Cookie、sessionStorage、localStorage-的区别"><span class="nav-number">1.1.13.</span> <span class="nav-text">13、Cookie、sessionStorage、localStorage 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14、Cookie-与-session-的区别"><span class="nav-number">1.1.14.</span> <span class="nav-text">14、Cookie 与 session 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15、web-worker"><span class="nav-number">1.1.15.</span> <span class="nav-text">15、web worker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16、HTML-语义化标签"><span class="nav-number">1.1.16.</span> <span class="nav-text">16、HTML 语义化标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17、iframe"><span class="nav-number">1.1.17.</span> <span class="nav-text">17、iframe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18、Doctype"><span class="nav-number">1.1.18.</span> <span class="nav-text">18、Doctype</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19、Cookie-如何防范-XSS-攻击"><span class="nav-number">1.1.19.</span> <span class="nav-text">19、Cookie 如何防范 XSS 攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20、RESTFUL"><span class="nav-number">1.1.20.</span> <span class="nav-text">20、RESTFUL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21、viewport-和移动端布局"><span class="nav-number">1.1.21.</span> <span class="nav-text">21、viewport 和移动端布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22、-click在ios上有300ms延迟，原因及如何解决？"><span class="nav-number">1.1.22.</span> <span class="nav-text">22、 click在ios上有300ms延迟，原因及如何解决？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23、addEventListener-参数"><span class="nav-number">1.1.23.</span> <span class="nav-text">23、addEventListener 参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24、http-常用请求头"><span class="nav-number">1.1.24.</span> <span class="nav-text">24、http 常用请求头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#25、缓存"><span class="nav-number">1.1.25.</span> <span class="nav-text">25、缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#26、前端优化"><span class="nav-number">1.1.26.</span> <span class="nav-text">26、前端优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#27、如何画一个三角形"><span class="nav-number">1.1.27.</span> <span class="nav-text">27、如何画一个三角形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#28、HTML5-新增元素"><span class="nav-number">1.1.28.</span> <span class="nav-text">28、HTML5 新增元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#29、在地址栏里输入一个-URL，到这个页面呈现出来，中间会发生什么？"><span class="nav-number">1.1.29.</span> <span class="nav-text">29、在地址栏里输入一个 URL，到这个页面呈现出来，中间会发生什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#30、游览器在生成页面的时候，会生成那两颗树"><span class="nav-number">1.1.30.</span> <span class="nav-text">30、游览器在生成页面的时候，会生成那两颗树</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
