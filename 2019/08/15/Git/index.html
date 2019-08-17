@@ -97,18 +97,18 @@
 
 
 
-<meta name="description" content="Git参考 廖雪峰 Git 教程 https://www.liaoxuefeng.com/wiki/896043488029600 之前也学习过一点 Git 操作，但是有段时间没有操作就又忘了，这次想自己整理一个 Git 相关的，以便今后忘记的时候能够快速回想起来😂 还在学习中，未完持续">
+<meta name="description" content="Git参考 廖雪峰 Git 教程 https://www.liaoxuefeng.com/wiki/896043488029600 之前也学习过一点 Git 操作，但是有段时间没有操作就又忘了，这次想自己整理一个 Git 相关的，以便今后忘记的时候能够快速回想起来😂">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git">
 <meta property="og:url" content="http://yoursite.com/2019/08/15/Git/index.html">
 <meta property="og:site_name" content="Maxwei`s Blog">
-<meta property="og:description" content="Git参考 廖雪峰 Git 教程 https://www.liaoxuefeng.com/wiki/896043488029600 之前也学习过一点 Git 操作，但是有段时间没有操作就又忘了，这次想自己整理一个 Git 相关的，以便今后忘记的时候能够快速回想起来😂 还在学习中，未完持续">
+<meta property="og:description" content="Git参考 廖雪峰 Git 教程 https://www.liaoxuefeng.com/wiki/896043488029600 之前也学习过一点 Git 操作，但是有段时间没有操作就又忘了，这次想自己整理一个 Git 相关的，以便今后忘记的时候能够快速回想起来😂">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-16T09:00:59.449Z">
+<meta property="og:updated_time" content="2019-08-17T08:35:51.218Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git">
-<meta name="twitter:description" content="Git参考 廖雪峰 Git 教程 https://www.liaoxuefeng.com/wiki/896043488029600 之前也学习过一点 Git 操作，但是有段时间没有操作就又忘了，这次想自己整理一个 Git 相关的，以便今后忘记的时候能够快速回想起来😂 还在学习中，未完持续">
+<meta name="twitter:description" content="Git参考 廖雪峰 Git 教程 https://www.liaoxuefeng.com/wiki/896043488029600 之前也学习过一点 Git 操作，但是有段时间没有操作就又忘了，这次想自己整理一个 Git 相关的，以便今后忘记的时候能够快速回想起来😂">
 
 
 
@@ -312,7 +312,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-15T17:05:58+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-15T16:35:12+08:00">
                 2019-08-15
               </time>
             
@@ -371,7 +371,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">WordCount:</span>
-           <span class="post-count">2k字</span>
+           <span class="post-count">2.1k字</span>
            
          </span>
 	  
@@ -381,7 +381,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">min2read:</span>
-           <span class="post-count">7分钟</span>
+           <span class="post-count">8分钟</span>
            
          </span>
 
@@ -409,7 +409,6 @@
       
         <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><p><small>参考 廖雪峰 Git 教程 <a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/896043488029600</a></small></p>
 <p>之前也学习过一点 Git 操作，但是有段时间没有操作就又忘了，这次想自己整理一个 Git 相关的，以便今后忘记的时候能够快速回想起来😂</p>
-<p><em>还在学习中，未完持续</em></p>
 <a id="more"></a>
 <h2 id="一、什么是-Git"><a href="#一、什么是-Git" class="headerlink" title="一、什么是 Git"></a>一、什么是 Git</h2><ul>
 <li>分布式版本控制工具</li>
@@ -561,6 +560,16 @@
 </ul>
 </li>
 <li>在 master 分支上修复的 bug，想要合并到当前自己工作的分支，可以使用<code>git cherry-pick &lt;commit&gt;</code>命令，将 bug 提交的修改内容，复制到自己的分支中来</li>
+</ul>
+</li>
+<li><p>多人协作</p>
+<ul>
+<li>查看远程库信息，使用<code>git remote -v</code>；</li>
+<li>本地新建的分支如果不推送到远程，对其他人就是不可见的；</li>
+<li>从本地推送分支，使用<code>git push origin branch-name</code>，如果推送失败，先用<code>git pull</code>抓取远程的新提交；</li>
+<li>在本地创建和远程分支对应的分支，使用<code>git checkout -b branch-name origin/branch-name</code>，本地和远程分支的名称最好一致；</li>
+<li>建立本地分支和远程分支的关联，使用<code>git branch --set-upstream branch-name origin/branch-name</code>；</li>
+<li>从远程抓取分支，使用<code>git pull</code>，如果有冲突，要先处理冲突。</li>
 </ul>
 </li>
 </ul>
