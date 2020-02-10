@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+<!-- 顶部加载条 -->
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #ff009e; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #ff009e, 0 0 5px #ff009e; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #ff009e;    /*上边框颜色*/
+        border-left-color: #ff009e;    /*左边框颜色*/
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="资料分析,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="资料分析还是要多做题，将方法运用到题目中，加深印象，找到感觉。 😤">
+<meta name="keywords" content="资料分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="公共基础知识">
+<meta property="og:url" content="http://yoursite.com/2020/02/10/资料分析/index.html">
+<meta property="og:site_name" content="Maxwei`s Blog">
+<meta property="og:description" content="资料分析还是要多做题，将方法运用到题目中，加深印象，找到感觉。 😤">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-02-10T07:31:43.196Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="公共基础知识">
+<meta name="twitter:description" content="资料分析还是要多做题，将方法运用到题目中，加深印象，找到感觉。 😤">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/02/10/资料分析/">
+
+
+
+
+
+  <title>公共基础知识 | Maxwei`s Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <!--在右上角添加github corners -->
+    <a href="https://github.com/MaxweiTang" class="github-corner" aria-label="View source on GitHub" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Maxwei`s Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/10/资料分析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MaxweiTang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Maxwei`s Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">公共基础知识</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-10T15:30:52+08:00">
+                2020-02-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/公考/" itemprop="url" rel="index">
+                    <span itemprop="name">公考</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/02/10/资料分析/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/02/10/资料分析/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+
+ 	 <br>
+         <span class="post-time">
+	   &nbsp; | &nbsp;
+           <span class="post-meta-item-icon">
+             <i class="fa fa-calendar-o"></i>
+           </span>
+           <span class="post-meta-item-text">WordCount:</span>
+           <span class="post-count">3.3k字</span>
+           
+         </span>
+	  
+      <span class="post-time">
+	   &nbsp; | &nbsp;
+           <span class="post-meta-item-icon">
+             <i class="fa fa-calendar-o"></i>
+           </span>
+           <span class="post-meta-item-text">min2read:</span>
+           <span class="post-count">12分钟</span>
+           
+         </span>
+
+
+
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>资料分析还是要多做题，将方法运用到题目中，加深印象，找到感觉。 😤</p>
+<a id="more"></a>
+<h1 id="解题方法"><a href="#解题方法" class="headerlink" title="解题方法"></a>解题方法</h1><h2 id="速算技巧"><a href="#速算技巧" class="headerlink" title="速算技巧"></a>速算技巧</h2><h3 id="截位直除"><a href="#截位直除" class="headerlink" title="截位直除"></a>截位直除</h3><ul>
+<li><p>截位：四舍五入保留</p>
+<ul>
+<li>如：678999，截两位 =&gt; 68</li>
+<li>如：0.67899，截两位 =&gt; 0.68</li>
+</ul>
+</li>
+<li><p>截多少位？<strong>看选项</strong></p>
+<ul>
+<li>首位不同：如 A.11    B.21    C.31    D.41<ul>
+<li>选项差距大，截<strong>两位</strong></li>
+</ul>
+</li>
+<li>首位相同：如 A.11    <strong>B.21</strong>    <strong>C.25</strong>    D.41<ul>
+<li>计算大小<strong>最接近两项</strong>的<strong>次位差</strong>（次位差：<strong>第二位</strong>的差；如：25 与 21 的次位差为 5 - 1 = 4）<ul>
+<li>次位差 &gt; 首位 ：选项差距大，截<strong>两位</strong></li>
+<li>次位差 &lt;= 首位 ：选项差距小，截<strong>三位</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>怎么截？<strong>看算式</strong></p>
+<ul>
+<li>一步除法（只有一个除号）：<strong>只截分母</strong><ul>
+<li>$ A/B $     $ A+B/C $    $ A/B+C $</li>
+<li>如：$ 32345/26189 $    $ 4286/(1+0.21) $    $ (4286-172)/(1+0.21) $</li>
+</ul>
+</li>
+<li>多步除法：<strong>分子</strong>、<strong>分母</strong>都截<ul>
+<li>如：$ (71774/3658) / (12482/4760) $</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>若遇到<strong>分母相加</strong>且<strong>计算量过大</strong>，那么也可以<strong>先截后加</strong>，相加后<strong>再截</strong><ul>
+<li>如：$ 71182/(71182+64222) $ 根据选项，我们需要截取<strong>三位</strong><ul>
+<li>71182 =&gt; 712    64222 =&gt; 642</li>
+<li>712 + 642 = 1354 =&gt; 135</li>
+<li>$ 71182/135 $</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>若选项存在<strong>约十倍关系</strong>时，考虑<strong>数量级</strong>（小数点、位数、单位）<ul>
+<li>如：A.10    B.0.1    C.100    D.0.01</li>
+</ul>
+</li>
+</ul>
+<h3 id="比较类"><a href="#比较类" class="headerlink" title="比较类"></a>比较类</h3><ul>
+<li>一大一小，直接看：分子大的分数大<ul>
+<li>如：$ 6/7 &gt; 5/8 $    6 &gt; 5 (大)    7 &lt; 8（小）为一大一小</li>
+</ul>
+</li>
+<li>同大同小：<ul>
+<li>如：$ 36/21 与 77/41 $    36 &lt; 77（小）    21 &lt; 41（小）为同小</li>
+<li>竖着直接除</li>
+<li>横着看速度（变化倍速）：谁快谁牛气，慢的看成一<ul>
+<li>如：$ 36/21 与 77/41 $<ul>
+<li>分子：77 是 36 的两倍多一点；分母：41 是 21 的不到两倍</li>
+<li>慢的看成一：所以将它们的分母看成一</li>
+<li>所以 36 &lt; 77，即$ 36/21 &lt; 77/41 $</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="快速找数"><a href="#快速找数" class="headerlink" title="快速找数"></a>快速找数</h2><ul>
+<li>内容：纯文字型材料、图标型材料</li>
+<li>要求：<ul>
+<li>掌握<strong>结构阅读法</strong>，会找<strong>关键词</strong></li>
+<li>对于图标型材料会识别<strong>关键信息</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="文字材料"><a href="#文字材料" class="headerlink" title="文字材料"></a>文字材料</h3><ul>
+<li>特点：数据多，相近词多</li>
+<li>方法：认清结构、找到关键词、一一对应</li>
+<li>注意：<ul>
+<li>标记段落<strong>主题词</strong>，与题干进行匹配</li>
+<li>注意相近词、时间、单位等</li>
+</ul>
+</li>
+</ul>
+<h3 id="图表材料"><a href="#图表材料" class="headerlink" title="图表材料"></a>图表材料</h3><ul>
+<li>类型：柱形图、饼形图、表格</li>
+<li>方法：<ul>
+<li>看表头三要素：时间、主体、单位</li>
+<li>有注释，一定要<strong>看注释</strong></li>
+</ul>
+</li>
+<li><p>饼状图：</p>
+<ul>
+<li>构图原则：<strong>12点钟</strong>方向开始，<strong>顺时针</strong>依次排布</li>
+</ul>
+</li>
+<li><p>注意：</p>
+<ul>
+<li><strong>表格材料</strong><ul>
+<li>横纵题目、标题、单位、备注</li>
+</ul>
+</li>
+<li><strong>图形材料</strong><ul>
+<li>标题、单位、图列</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="综合材料"><a href="#综合材料" class="headerlink" title="综合材料"></a>综合材料</h3><ul>
+<li>不同类型材料之间的关系、材料结构</li>
+</ul>
+<h3 id="坑点"><a href="#坑点" class="headerlink" title="坑点"></a>坑点</h3><ul>
+<li>表格材料，“<strong>总计</strong>”坑</li>
+<li><strong>单位</strong>坑（民航、人口）</li>
+</ul>
+<h1 id="题型技巧"><a href="#题型技巧" class="headerlink" title="题型技巧"></a>题型技巧</h1><h2 id="基期与现期"><a href="#基期与现期" class="headerlink" title="基期与现期"></a>基期与现期</h2><ul>
+<li>作为<strong>对比参照</strong>的是<strong>基期</strong>，而相对于基期<strong>比较</strong>的是<strong>现期</strong><ul>
+<li><strong>时间</strong>来讲：<strong>过去</strong>的是<strong>基期</strong>；<strong>现在</strong>的是<strong>现期</strong></li>
+<li><strong>对象</strong>来讲：<strong>被比较</strong>的是<strong>基期</strong><ul>
+<li>如：马云比我有钱<ul>
+<li>马云是现期</li>
+<li>我是基期</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>增长量：现期 - 基期</li>
+<li>增长率（r）：$ (现期-基期)/基期 $</li>
+</ul>
+<h3 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h3><h4 id="基期量"><a href="#基期量" class="headerlink" title="基期量"></a>基期量</h4><ul>
+<li>给<strong>现在</strong>，求<strong>以前</strong>某时期的值</li>
+<li>计算公式：<ul>
+<li>基期量：现期 - 增长率</li>
+<li>基期率：$ 现期/(1+增长率) $</li>
+</ul>
+</li>
+<li>速算公式<ul>
+<li>$ |r|&gt;0.5 $，截位直除</li>
+<li>$ |r|&lt;= 0.5 $，化除为乘<ul>
+<li>化除为乘：<ul>
+<li>应用：求基期，<strong>选项差距小</strong>，$ |r|&lt;=0.5 $</li>
+<li>方式:<ul>
+<li>$ A/(1-r)≈ A+A*r $</li>
+<li>$ A / (1 + r) ≈ A-A*r $</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>口诀<ul>
+<li>读问题，看时间;</li>
+<li>判题型，找数据；</li>
+<li>列式子，先别算；</li>
+<li>要想快，看选项；</li>
+</ul>
+</li>
+</ul>
+<h4 id="基期和差"><a href="#基期和差" class="headerlink" title="基期和差"></a>基期和差</h4><ul>
+<li>先观察现期坑，排除；再看大小关系，选择</li>
+<li>截位直除</li>
+</ul>
+<h4 id="现期量"><a href="#现期量" class="headerlink" title="现期量"></a>现期量</h4><ul>
+<li>题型识别：给现在，求后面某时期的值</li>
+<li>计算公式：<ul>
+<li>$现期量 = 基期量 + 增长量$</li>
+<li>$现期量 = 基期量 * (1 + r)$</li>
+</ul>
+</li>
+</ul>
+<h2 id="同比和环比"><a href="#同比和环比" class="headerlink" title="同比和环比"></a>同比和环比</h2><ul>
+<li>同比：与<strong>上年</strong>同期相比</li>
+<li>环比：与紧紧<strong>相邻</strong>的<strong>上一统计周期</strong>相比（月环比、季度环比）</li>
+</ul>
+<h2 id="一般增长率"><a href="#一般增长率" class="headerlink" title="一般增长率"></a>一般增长率</h2><ul>
+<li>简单计算类：高减低加</li>
+<li>给具体量：<ul>
+<li>识别：增长 / 下降 + %、几成、增长速度、增长幅度</li>
+<li>公式：$ r = 增长量/基期量 = 增长量/(现期-增长量) = (现期 - 基期)/基期 $</li>
+<li>速算：截位直除或估算</li>
+</ul>
+</li>
+<li>增长率比较<ul>
+<li>识别：增速（增幅）最快 / 最慢；增长率最高 / 最低</li>
+<li>比较方法：$ r = 增长量/基期量 = (现期 - 基期)/基期 = 现期/基期 - 1 $<ul>
+<li>当$ 现期/基期 = 2^+ $，用$ 现期量/基期量 $比较</li>
+<li>当$ 现期/基期 = 1^+ $，用$ 增长量/基期量 $比较</li>
+</ul>
+</li>
+<li>速算技巧：分数比较</li>
+</ul>
+</li>
+</ul>
+<h2 id="增长量"><a href="#增长量" class="headerlink" title="增长量"></a>增长量</h2><ul>
+<li>题型识别：增长 + 具体单位<ul>
+<li>例：2017年比2016年增加了多少亿元</li>
+</ul>
+</li>
+<li>计算公式：$ 增长量 = 现期 - 基期 = 基期 <em> r = 现期/(1+r)</em>r $</li>
+</ul>
+<h3 id="年均增长量"><a href="#年均增长量" class="headerlink" title="年均增长量"></a>年均增长量</h3><ul>
+<li>识别：年均 + 增长 + 单位</li>
+<li>公式：$ 年均增长量 = (现期量 - 基期量) / 年份差 $</li>
+<li>注：现期、基期及年份差的确定和年均增长率相同</li>
+</ul>
+<h3 id="已知现期、增长率、求增长量"><a href="#已知现期、增长率、求增长量" class="headerlink" title="已知现期、增长率、求增长量"></a>已知现期、增长率、求增长量</h3><ul>
+<li>公式：$ 增长量 = 现期/(1+r)*r $  太复杂<ul>
+<li>增长率<strong>百化分</strong>，$ |r| = 1/n $</li>
+<li>$ 增长量 = 现期/(n+1)；减少量 = 现期/(n-1) $</li>
+</ul>
+</li>
+<li>例：2016年总收入是100万元，同比增长了33.3%。求：2016年与2015年相比总收入增长了多少万元？<ul>
+<li>增长率：33.3% =&gt; 百化分：$ r=1/3 $</li>
+<li>增长量：$ 100/(3 + 1) = 25$</li>
+</ul>
+</li>
+<li>【百化分】<ul>
+<li>$ 1/2 = 50\%$    $1/4 = 25\%$    $1/8 = 12.5\%$    $1/16 = 6.25\%$</li>
+<li>$ 1/3 \approx 33.3\% $    $ 1/6 \approx 16.7\% $    $ 1/12 \approx 8.3\% $</li>
+<li>$ 1/5 = 20\% $    $ 1/10 = 10\% $    $ 1/20 = 5\% $</li>
+<li>$ 1/7 \approx 14.3\% $    $ 1/14 \approx 7.1\% $</li>
+<li>$ 1/9 \approx 11.1\% $    $ 1/11 \approx 9.1\% $</li>
+<li>$ 1/13 \approx 7.7\% $    $ 1/15 \approx 6.7\% $</li>
+<li>$ 1/17 \approx 5.9\% $    $ 1/18 \approx 5.6\% $    $ 1/19 \approx 5.3\% $</li>
+</ul>
+</li>
+<li>增长率百化分之<strong>放缩法</strong><ul>
+<li>利用与背过的百分数的倍数关系，实现百化分</li>
+<li>2.5% = 1/40；1.43% = 1/70；67% = 1/1.5；22% = 1/4.5</li>
+</ul>
+</li>
+<li>增长率百化分之<strong>取中法</strong><ul>
+<li>如果遇到百分数左右难取舍，且选项接近，取中即可</li>
+<li>18.5% = 1/5.5；15.4% = 1/6.5；28.7 = 1/3.5</li>
+</ul>
+</li>
+</ul>
+<h2 id="增长量比较"><a href="#增长量比较" class="headerlink" title="增长量比较"></a>增长量比较</h2><ul>
+<li>题型识别：增长最多 / 最少</li>
+<li>考察形式<ul>
+<li>给现期量、基期量：增长量 = 现期量 - 基期量</li>
+<li>给现期量、r：<ul>
+<li>大大则大</li>
+<li>百化分计算</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="比重"><a href="#比重" class="headerlink" title="比重"></a>比重</h2><h3 id="比重中的饼图问题"><a href="#比重中的饼图问题" class="headerlink" title="比重中的饼图问题"></a>比重中的饼图问题</h3><ul>
+<li>直接给总量：找特殊值<ul>
+<li>如：总量：100、四川：25 =&gt; 那么就有特殊值 1/4</li>
+</ul>
+</li>
+<li>没有直接给总量：<ul>
+<li>大小</li>
+<li>倍数</li>
+</ul>
+</li>
+</ul>
+<h3 id="现期比重"><a href="#现期比重" class="headerlink" title="现期比重"></a>现期比重</h3><ul>
+<li>题型识别：…占…的比重<ul>
+<li>如：某班总共500人，其中男生100人，求男生占全班总人数的比重</li>
+</ul>
+</li>
+<li>公式：$ 比重 = 部分/总体 = 占前/占后$</li>
+<li>考察形式<ul>
+<li>已知部分和总体，求比重</li>
+<li>已知部分和比重，求总体</li>
+<li>已知总体和比重，求部分</li>
+</ul>
+</li>
+<li>速算技巧：截位直除</li>
+<li>概念引申：<ul>
+<li>$ 增长贡献率=部分增量/总体增量 $</li>
+<li>$ 利润率=利润/收入 $</li>
+</ul>
+</li>
+</ul>
+<h3 id="基期比重"><a href="#基期比重" class="headerlink" title="基期比重"></a>基期比重</h3><ul>
+<li><p>提醒识别：问题时间在材料之前，占、比重</p>
+<ul>
+<li><p>例：2017年我的家庭总收入B万元，同比增长b，</p>
+<p>​       2017年我个人收入A万，同比增长a，</p>
+<p>求：2016年我的收入占家庭总收入的比重</p>
+</li>
+</ul>
+</li>
+<li><p>计算公式：$ A/b * (1 + b)/(1 + a) $</p>
+<ul>
+<li>A：分子（部分的现期量）    B：分母（整体的现期量）</li>
+<li>a：分子的增长率                   A：分母的增长率</li>
+</ul>
+</li>
+<li><p>速算：</p>
+<ul>
+<li>截位直除</li>
+<li>先算现期比重，再看$ (1+b)/(1+a) $ 大于1或者小于1，结合选项排除答案</li>
+</ul>
+</li>
+</ul>
+<h3 id="现期与基期比重比较与计算（两期比重）"><a href="#现期与基期比重比较与计算（两期比重）" class="headerlink" title="现期与基期比重比较与计算（两期比重）"></a>现期与基期比重比较与计算（两期比重）</h3><ul>
+<li><p>比较 ：升降</p>
+<ul>
+<li><p>提醒识别：两个时间 + 比重</p>
+<ul>
+<li><p>【识别】2013年1~9月，苏中工业用电量占江苏省工业用电量总量的比重与去年相比：</p>
+<p>A.提高    B.降低    C.不变    D.无法判断</p>
+</li>
+</ul>
+</li>
+<li><p>计算公式：$ 现期比 - 基期比 = A/B - A/B<em>(1+b)/(1+a)=A/B</em>(a-b)/(1+a) $</p>
+</li>
+<li><p>升降判断：</p>
+<ul>
+<li>a &gt; b，比重上升</li>
+<li>a &lt; b，比重下降</li>
+<li>a = b，比重不变</li>
+<li>a：分子（部分量）的增长率；b：分母（总体量）的增长率</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>上升/下降几个百分点</p>
+<ul>
+<li><p>提醒识别：两个时间 + 比重</p>
+<ul>
+<li><p>【识别】2015年一季度，该省园区企业上缴税金占主营业务收入的比重比上年同期：</p>
+<p>A.上升了0.1个百分点    B.上升了3.1个百分点</p>
+<p>C.下降了0.1个百分点    D.下降了3.1个百分点</p>
+</li>
+</ul>
+</li>
+<li><p>计算公式：现期比 - 基期比</p>
+</li>
+<li><p>$A/B-A/B<em>(1+b)/(1+a)=A/B</em>(a-b)/(1+a)$</p>
+</li>
+</ul>
+<p>​              $=A/B<em>1/(1+a)</em>(a-b)&lt;|a-b|$</p>
+<ul>
+<li>解题步骤：<ul>
+<li>判定方向（a &gt; b，上升；a &lt; b，下降）</li>
+<li>定大小：小于 | a - b |</li>
+<li>a：分子（部分量）的增长率；b：分母（总体量）的增长率</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="平均数"><a href="#平均数" class="headerlink" title="平均数"></a>平均数</h2><h3 id="现期平均"><a href="#现期平均" class="headerlink" title="现期平均"></a>现期平均</h3><ul>
+<li>题型识别：问题时间与材料一致 + 平均（均/每/单位）</li>
+<li>计算公式：$ 平均数 = 总数/个数 = A/B $</li>
+<li>计算形式：$ 后/前 $</li>
+<li>速算技巧：<ul>
+<li>截位直除</li>
+<li>削峰填谷（计算平均数）<ul>
+<li>定基准，算差距</li>
+<li>汇总除以个数，再加上基准</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="基期平均"><a href="#基期平均" class="headerlink" title="基期平均"></a>基期平均</h3><ul>
+<li>题型识别：问题时间在材料之前 + 平均数问法（均/每/单位）</li>
+<li>计算公式：$ 基期平均 = A/B *(1+b)/(1+a) $</li>
+<li>速算技巧<ul>
+<li>截位直除</li>
+<li>与现期比较</li>
+</ul>
+</li>
+</ul>
+<h3 id="现期平均与基期平均的比较与计算"><a href="#现期平均与基期平均的比较与计算" class="headerlink" title="现期平均与基期平均的比较与计算"></a>现期平均与基期平均的比较与计算</h3><ul>
+<li>题型识别：题干中涉及两个时间 + 平均数问法</li>
+<li>公式：$ 现期平均-基期平均=A/B-A/B<em>(1+b)/(1+a)=A/B</em>(a-b)/(1+a) $</li>
+<li>升降判断<ul>
+<li>a &gt; b，平均数上升</li>
+<li>a &lt; b，平均数下降</li>
+<li>a = b，平均数不变</li>
+<li>a：分子的增长率，b：分母的增长率</li>
+</ul>
+</li>
+</ul>
+<h3 id="平均数的增长率"><a href="#平均数的增长率" class="headerlink" title="平均数的增长率"></a>平均数的增长率</h3><ul>
+<li>题型识别：平均数 + 增长 + %<ul>
+<li>例子：2017年小明家总收入A，同比增长率a；总人口B，同比增长率b，求17年小明家人均收入同比增长了百分之多少？</li>
+</ul>
+</li>
+<li>公式：$ r=(a-b)/(1+b) $（a是分子的增长率，b是分母的增长率）</li>
+<li>做题逻辑<ul>
+<li>确定分子、分母（谁 / 谁）</li>
+<li>代入公式：$ r=(a-b)/(1+b)  $</li>
+</ul>
+</li>
+</ul>
+<h2 id="倍数"><a href="#倍数" class="headerlink" title="倍数"></a>倍数</h2><ul>
+<li>题型识别：时间 + 倍数<ul>
+<li>例：2017年小明收入10个亿，马云收入2个亿，小明收入是马云的多少倍</li>
+</ul>
+</li>
+<li>现期倍数：$ A/B $<ul>
+<li>例：2017年小明收入A个亿，同比增长率为a，马云收入B个亿，同比增长率为b，2016年小明收入是马云的多少倍？</li>
+</ul>
+</li>
+<li>基期倍数：$ A/B * (1+b)/(1+a) $</li>
+<li>速算技巧：<ul>
+<li>截位直除</li>
+<li>先计算$ A/B $，再看$ (1+b)/(1+a) $与 1 的关系 </li>
+</ul>
+</li>
+<li>辨析：<ul>
+<li>A是B的几倍：$ A/B $</li>
+<li>A比B增长（多）几倍：$ (A-B)/B=A/B-1 $</li>
+<li>A超过B的n倍：$A &gt; B * n$</li>
+</ul>
+</li>
+</ul>
+<h2 id="特殊增长率"><a href="#特殊增长率" class="headerlink" title="特殊增长率"></a>特殊增长率</h2><h3 id="间隔增长率（倍数）"><a href="#间隔增长率（倍数）" class="headerlink" title="间隔增长率（倍数）"></a>间隔增长率（倍数）</h3><ul>
+<li><p>题型识别：中间隔一年，求增长率</p>
+<ul>
+<li><p>例：某企业2015年主营业务收入比2014年的增长率为$ r_1 $，2016年比2015年的增长率为$ r_2 $。</p>
+<p>求：该企业2016年主营业务收入比2014年的增长率为多少？</p>
+</li>
+</ul>
+</li>
+<li><p>公式：$ r = r_1 + r_2 + r_1 * r_2 $</p>
+</li>
+<li><p>解题技巧</p>
+<ul>
+<li>$ r_1、r_2 $绝对值均小于 10% 时，$ r_1 * r_2 $ 可忽略</li>
+<li>结合选型或百化分</li>
+<li>若问题是间隔倍数<ul>
+<li>$ 间隔倍数 = r + 1 $</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="间隔基期量"><a href="#间隔基期量" class="headerlink" title="间隔基期量"></a>间隔基期量</h3><ul>
+<li>题型识别：间隔一年，求基期量</li>
+<li>公式：$ 间隔基期量 = 现期量/(1+间隔增长率) $</li>
+<li>做题步骤<ul>
+<li>先求间隔增长率 $ r = r_1 + r_2 + r_1 * r_2 $</li>
+<li>计算：$ 现期量/(1+间隔r) $</li>
+</ul>
+</li>
+</ul>
+<h3 id="年均增长率"><a href="#年均增长率" class="headerlink" title="年均增长率"></a>年均增长率</h3><ul>
+<li>题型识别：年均增长最快、年均增速排序</li>
+<li>公式<ul>
+<li>$ (1+r)^n=现期量/基期量 $（n 为现期和基期的年份差）</li>
+</ul>
+</li>
+<li>技巧：<ul>
+<li>比较：n 相同，直接比较$ 现期/基期 $</li>
+<li>计算：放弃</li>
+</ul>
+</li>
+</ul>
+<h3 id="混合增长率"><a href="#混合增长率" class="headerlink" title="混合增长率"></a>混合增长率</h3><ul>
+<li>题型识别：部分与总体之间的增长率关系<ul>
+<li>房产、地产、房地产</li>
+<li>出口、进口、进出口</li>
+<li>城镇、农村、全国</li>
+<li>上半年、下半年、全年</li>
+<li>硕士、博士、研究生</li>
+</ul>
+</li>
+<li>判断口诀<ul>
+<li>混合后居中（大于小的、小于大的）</li>
+<li>偏向基期较大的（基期指的基期量，做题中一般用现期量近似代替）</li>
+</ul>
+</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="直接找数"><a href="#直接找数" class="headerlink" title="直接找数"></a>直接找数</h3><ul>
+<li>注意范围等表述陷阱</li>
+</ul>
+<h3 id="简单加减"><a href="#简单加减" class="headerlink" title="简单加减"></a>简单加减</h3><ul>
+<li>选项与材料精度相同：<strong>尾数法</strong></li>
+<li>选项与材料精度不同：估算</li>
+</ul>
+<h3 id="排序问题"><a href="#排序问题" class="headerlink" title="排序问题"></a>排序问题</h3><ul>
+<li>时间、单位、主题、顺序</li>
+</ul>
+<h2 id="综合分析"><a href="#综合分析" class="headerlink" title="综合分析"></a>综合分析</h2><ul>
+<li>做题顺序：先CD，再AB，要灵活，复杂的，放最后</li>
+<li>陷阱类型：<ul>
+<li>时间陷阱<ul>
+<li>时间段是否和材料一致</li>
+</ul>
+</li>
+<li>主题陷阱<ul>
+<li>主体是否和材料一致</li>
+</ul>
+</li>
+<li>单位陷阱<ul>
+<li>简单计算时，需要谨慎</li>
+</ul>
+</li>
+<li>概念陷阱<ul>
+<li>近、将近 =&gt; 小于但很接近</li>
+<li>超过 =&gt; 大于</li>
+<li>约 =&gt; 可左可右</li>
+<li>持续增长、逐年增长 =&gt; 每一年都要比上一年增长</li>
+<li>增长趋势 =&gt; 一般看首尾</li>
+<li>说比重，必须要有明显的整体与部分的关系，不能说男生占女生的比重</li>
+<li>不足一年 =&gt; 当年新增加的</li>
+</ul>
+</li>
+<li>最后注意<ul>
+<li>选对还是选错，读题时先标出来</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="常见词语解析"><a href="#常见词语解析" class="headerlink" title="常见词语解析"></a>常见词语解析</h1><ul>
+<li><strong>增长率</strong>与<strong>倍数</strong><ul>
+<li>增长率：比基数多出的<strong>比率</strong><ul>
+<li>A是B的多少倍</li>
+<li>倍数：$A/B$</li>
+</ul>
+</li>
+<li>倍数：两数直接的<strong>比值</strong><ul>
+<li>A比B多 / 增长多少（%）</li>
+<li>$ 增长率 = (A-B)/B = A/B - 1 $</li>
+</ul>
+</li>
+<li>倍数 = 增长率 + 1</li>
+</ul>
+</li>
+<li><strong>成数</strong>与<strong>翻番</strong><ul>
+<li>成数：几成相当于十分之几</li>
+<li>翻番：翻一番为原来的两倍；翻两番为原来的四倍；依此类推，翻n番为原来的$ 2^n $倍</li>
+</ul>
+</li>
+<li>增幅 = 增长幅度 = 增长率 = 增速</li>
+<li>降幅：必须下降，r &lt; 0</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+
+    <!-- 文章结束标记  -->
+    <div>
+     
+       <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
+    
+</div>
+     
+   </div>
+
+
+    
+
+    
+
+    
+	
+    <footer class="post-footer">
+      
+       <!-- <div class="post-tags">
+          
+            <a href="/tags/资料分析/" rel="tag"># 资料分析</a>
+          
+        </div> -->
+
+      
+         <div>    
+          
+          <div id="div-border-left-red">
+          <ul class="post-copyright">
+             <li class="post-copyright-link">
+              <strong>Ahthro: </strong>
+              <span>MaxweiTang<span>
+            </span></span></li>
+
+            <li class="post-copyright-link">
+              <strong>Link: </strong>
+              <a href="/2020/02/10/资料分析/" title="公共基础知识">http://yoursite.com/2020/02/10/资料分析/</a>
+            </li>
+
+            <li class="post-copyright-link">
+                <strong>Contact: </strong><a>1002788303@qq.com</a>
+            </li>  
+
+            <li class="post-copyright-license">
+              <strong>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布<br></strong>
+              <b>转载请注明出处, 谢谢！</b> 
+           </li>
+          </ul>
+	  </div>
+        
+      </div>
+      
+        <div class="post-tags">
+          
+            <a href="/tags/资料分析/" rel="tag"><i class="fa fa-tag"></i> 资料分析</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/10/公共基础知识/" rel="next" title="公共基础知识">
+                <i class="fa fa-chevron-left"></i> 公共基础知识
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+      
+
+
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="MaxweiTang">
+            
+              <p class="site-author-name" itemprop="name">MaxweiTang</p>
+              <p class="site-description motion-element" itemprop="description">前端初学者 | 发际线堪忧 | 宅 | 乐天派</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/MaxweiTang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1002788303@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          <div id="days"></div>
+    <script>
+    function show_date_time(){
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date("03/27/2019 21:55:50");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=setzero(Math.floor(e_hrsold));
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+        seconds=setzero(Math.floor((e_minsold-minsold)*60));
+        document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+    }
+function setzero(i){
+    if (i<10)
+    {i="0" + i};
+    return i;
+}
+show_date_time();
+</script>
+
+        </div>
+	<!-- 已运行时间  -->
+	<div id="days"></div>
+    <script>
+    function show_date_time(){
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date("03/27/2019 21:55:50");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=setzero(Math.floor(e_hrsold));
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+        seconds=setzero(Math.floor((e_minsold-minsold)*60));
+        document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+    }
+function setzero(i){
+    if (i<10)
+    {i="0" + i};
+    return i;
+}
+show_date_time();
+</script>
+
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#解题方法"><span class="nav-number">1.</span> <span class="nav-text">解题方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#速算技巧"><span class="nav-number">1.1.</span> <span class="nav-text">速算技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#截位直除"><span class="nav-number">1.1.1.</span> <span class="nav-text">截位直除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#比较类"><span class="nav-number">1.1.2.</span> <span class="nav-text">比较类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速找数"><span class="nav-number">1.2.</span> <span class="nav-text">快速找数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文字材料"><span class="nav-number">1.2.1.</span> <span class="nav-text">文字材料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图表材料"><span class="nav-number">1.2.2.</span> <span class="nav-text">图表材料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#综合材料"><span class="nav-number">1.2.3.</span> <span class="nav-text">综合材料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#坑点"><span class="nav-number">1.2.4.</span> <span class="nav-text">坑点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题型技巧"><span class="nav-number">2.</span> <span class="nav-text">题型技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基期与现期"><span class="nav-number">2.1.</span> <span class="nav-text">基期与现期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题型"><span class="nav-number">2.1.1.</span> <span class="nav-text">题型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基期量"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">基期量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基期和差"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">基期和差</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#现期量"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">现期量</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同比和环比"><span class="nav-number">2.2.</span> <span class="nav-text">同比和环比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一般增长率"><span class="nav-number">2.3.</span> <span class="nav-text">一般增长率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增长量"><span class="nav-number">2.4.</span> <span class="nav-text">增长量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#年均增长量"><span class="nav-number">2.4.1.</span> <span class="nav-text">年均增长量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#已知现期、增长率、求增长量"><span class="nav-number">2.4.2.</span> <span class="nav-text">已知现期、增长率、求增长量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增长量比较"><span class="nav-number">2.5.</span> <span class="nav-text">增长量比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比重"><span class="nav-number">2.6.</span> <span class="nav-text">比重</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#比重中的饼图问题"><span class="nav-number">2.6.1.</span> <span class="nav-text">比重中的饼图问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#现期比重"><span class="nav-number">2.6.2.</span> <span class="nav-text">现期比重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基期比重"><span class="nav-number">2.6.3.</span> <span class="nav-text">基期比重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#现期与基期比重比较与计算（两期比重）"><span class="nav-number">2.6.4.</span> <span class="nav-text">现期与基期比重比较与计算（两期比重）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平均数"><span class="nav-number">2.7.</span> <span class="nav-text">平均数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#现期平均"><span class="nav-number">2.7.1.</span> <span class="nav-text">现期平均</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基期平均"><span class="nav-number">2.7.2.</span> <span class="nav-text">基期平均</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#现期平均与基期平均的比较与计算"><span class="nav-number">2.7.3.</span> <span class="nav-text">现期平均与基期平均的比较与计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#平均数的增长率"><span class="nav-number">2.7.4.</span> <span class="nav-text">平均数的增长率</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#倍数"><span class="nav-number">2.8.</span> <span class="nav-text">倍数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊增长率"><span class="nav-number">2.9.</span> <span class="nav-text">特殊增长率</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#间隔增长率（倍数）"><span class="nav-number">2.9.1.</span> <span class="nav-text">间隔增长率（倍数）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#间隔基期量"><span class="nav-number">2.9.2.</span> <span class="nav-text">间隔基期量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#年均增长率"><span class="nav-number">2.9.3.</span> <span class="nav-text">年均增长率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#混合增长率"><span class="nav-number">2.9.4.</span> <span class="nav-text">混合增长率</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">2.10.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#直接找数"><span class="nav-number">2.10.1.</span> <span class="nav-text">直接找数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单加减"><span class="nav-number">2.10.2.</span> <span class="nav-text">简单加减</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序问题"><span class="nav-number">2.10.3.</span> <span class="nav-text">排序问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#综合分析"><span class="nav-number">2.11.</span> <span class="nav-text">综合分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见词语解析"><span class="nav-number">3.</span> <span class="nav-text">常见词语解析</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MaxweiTang</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>  
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        app_id: 'Iu3fkQB0jicGdeNjGLC5oWe2-gzGzoHsz',
+        app_key: 'EkwSImBCNcask9Xc9o25l6Iq',
+        placeholder: '来说两句吧...',
+        avatar:'mp',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?bd2294fafea3389ee458f1d9be5a2157"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"jsonPath":"live2d-widget-model-tororo"},"display":{"superSample":2,"width":200,"height":250,"position":"left"},"mobile":{"show":false},"react":{"opacityDefault":0.9,"opacityOnHover":0.5},"log":false});</script></body>
+</html>
