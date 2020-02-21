@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="Maxwei`s Blog">
 <meta property="og:description" content="资料分析还是要多做题，将方法运用到题目中，加深印象，找到感觉。 😤">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-11T03:26:07.631Z">
+<meta property="og:updated_time" content="2020-02-21T05:46:04.845Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="资料分析">
 <meta name="twitter:description" content="资料分析还是要多做题，将方法运用到题目中，加深印象，找到感觉。 😤">
@@ -371,7 +371,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">WordCount:</span>
-           <span class="post-count">3.3k字</span>
+           <span class="post-count">3.5k字</span>
            
          </span>
 	  
@@ -381,7 +381,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">min2read:</span>
-           <span class="post-count">12分钟</span>
+           <span class="post-count">13分钟</span>
            
          </span>
 
@@ -435,21 +435,21 @@
 <li><p>怎么截？<strong>看算式</strong></p>
 <ul>
 <li>一步除法（只有一个除号）：<strong>只截分母</strong><ul>
-<li>$ A/B $     $ A+B/C $    $ A/B+C $</li>
-<li>如：$ 32345/26189 $    $ 4286/(1+0.21) $    $ (4286-172)/(1+0.21) $</li>
+<li>$ \frac{A}{B} $     $ \frac{A+B}{C} $    $ \frac{A}{B+C} $</li>
+<li>如：$ \frac{32345}{26189} $    $ \frac{4286}{1+0.21} $    $ \frac{4286-172}{1+0.21} $</li>
 </ul>
 </li>
 <li>多步除法：<strong>分子</strong>、<strong>分母</strong>都截<ul>
-<li>如：$ (71774/3658) / (12482/4760) $</li>
+<li>如：$ \frac{\frac{71774}{3658}}{\frac{12482}{4760}} $</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>若遇到<strong>分母相加</strong>且<strong>计算量过大</strong>，那么也可以<strong>先截后加</strong>，相加后<strong>再截</strong><ul>
-<li>如：$ 71182/(71182+64222) $ 根据选项，我们需要截取<strong>三位</strong><ul>
+<li>如：$ \frac{71182}{71182+64222} $ 根据选项，我们需要截取<strong>三位</strong><ul>
 <li>71182 =&gt; 712    64222 =&gt; 642</li>
 <li>712 + 642 = 1354 =&gt; 135</li>
-<li>$ 71182/135 $</li>
+<li>$ \frac{71182}{135 }$</li>
 </ul>
 </li>
 </ul>
@@ -461,17 +461,17 @@
 </ul>
 <h3 id="比较类"><a href="#比较类" class="headerlink" title="比较类"></a>比较类</h3><ul>
 <li>一大一小，直接看：分子大的分数大<ul>
-<li>如：$ 6/7 &gt; 5/8 $    6 &gt; 5 (大)    7 &lt; 8（小）为一大一小</li>
+<li>如：$ \frac{6}{7} &gt; \frac{5}{8} $    6 &gt; 5 (大)    7 &lt; 8（小）为一大一小</li>
 </ul>
 </li>
 <li>同大同小：<ul>
-<li>如：$ 36/21 与 77/41 $    36 &lt; 77（小）    21 &lt; 41（小）为同小</li>
+<li>如：$ \frac{36}{21} 与 \frac{77}{41} $    36 &lt; 77（小）    21 &lt; 41（小）为同小</li>
 <li>竖着直接除</li>
 <li>横着看速度（变化倍速）：谁快谁牛气，慢的看成一<ul>
-<li>如：$ 36/21 与 77/41 $<ul>
+<li>如：$ \frac{36}{21}与 \frac{77}{41} $<ul>
 <li>分子：77 是 36 的两倍多一点；分母：41 是 21 的不到两倍</li>
 <li>慢的看成一：所以将它们的分母看成一</li>
-<li>所以 36 &lt; 77，即$ 36/21 &lt; 77/41 $</li>
+<li>所以 36 &lt; 77，即$ \frac{36}{21}&lt; \frac{77}{41}$</li>
 </ul>
 </li>
 </ul>
@@ -542,13 +542,13 @@
 </ul>
 </li>
 <li>增长量：现期 - 基期</li>
-<li>增长率（r）：$ (现期-基期)/基期 $</li>
+<li>增长率（r）：$ \frac{现期-基期}{基期} $</li>
 </ul>
 <h3 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h3><h4 id="基期量"><a href="#基期量" class="headerlink" title="基期量"></a>基期量</h4><ul>
 <li>给<strong>现在</strong>，求<strong>以前</strong>某时期的值</li>
 <li>计算公式：<ul>
 <li>基期量：现期 - 增长率</li>
-<li>基期率：$ 现期/(1+增长率) $</li>
+<li>基期率：$ \frac{现期}{1+增长率} $</li>
 </ul>
 </li>
 <li>速算公式<ul>
@@ -557,8 +557,8 @@
 <li>化除为乘：<ul>
 <li>应用：求基期，<strong>选项差距小</strong>，$ |r|&lt;=0.5 $</li>
 <li>方式:<ul>
-<li>$ A/(1-r)≈ A+A*r $</li>
-<li>$ A / (1 + r) ≈ A-A*r $</li>
+<li>$ \frac{A}{1-r}≈ A+A*r $</li>
+<li>$ \frac{A}{1 + r} ≈ A-A*r $</li>
 </ul>
 </li>
 </ul>
@@ -595,15 +595,15 @@
 <li>简单计算类：高减低加</li>
 <li>给具体量：<ul>
 <li>识别：增长 / 下降 + %、几成、增长速度、增长幅度</li>
-<li>公式：$ r = 增长量/基期量 = 增长量/(现期-增长量) = (现期 - 基期)/基期 $</li>
+<li>公式：$ r = \frac{增长量}{基期量} = \frac{增长量}{现期-增长量} = \frac{现期 - 基期}{基期} $</li>
 <li>速算：截位直除或估算</li>
 </ul>
 </li>
 <li>增长率比较<ul>
 <li>识别：增速（增幅）最快 / 最慢；增长率最高 / 最低</li>
-<li>比较方法：$ r = 增长量/基期量 = (现期 - 基期)/基期 = 现期/基期 - 1 $<ul>
-<li>当$ 现期/基期 = 2^+ $，用$ 现期量/基期量 $比较</li>
-<li>当$ 现期/基期 = 1^+ $，用$ 增长量/基期量 $比较</li>
+<li>比较方法：$ r = \frac{增长量}{基期量} = \frac{现期 - 基期}{基期} = \frac{现期}{基期} - 1 $<ul>
+<li>当$ \frac{现期}{基期} = 2^+ $，用$ \frac{现期量}{基期量} $比较</li>
+<li>当$ \frac{现期}{基期} = 1^+ $，用$ \frac{增长量}{基期量} $比较</li>
 </ul>
 </li>
 <li>速算技巧：分数比较</li>
@@ -615,42 +615,42 @@
 <li>例：2017年比2016年增加了多少亿元</li>
 </ul>
 </li>
-<li>计算公式：$ 增长量 = 现期 - 基期 = 基期 <em> r = 现期/(1+r)</em>r $</li>
+<li>计算公式：$ 增长量 = 现期 - 基期 = 基期 <em> r = \frac{现期}{1+r}</em>r $</li>
 </ul>
 <h3 id="年均增长量"><a href="#年均增长量" class="headerlink" title="年均增长量"></a>年均增长量</h3><ul>
 <li>识别：年均 + 增长 + 单位</li>
-<li>公式：$ 年均增长量 = (现期量 - 基期量) / 年份差 $</li>
+<li>公式：$ 年均增长量 = \frac{现期量 - 基期量}{年份差} $</li>
 <li>注：现期、基期及年份差的确定和年均增长率相同</li>
 </ul>
 <h3 id="已知现期、增长率、求增长量"><a href="#已知现期、增长率、求增长量" class="headerlink" title="已知现期、增长率、求增长量"></a>已知现期、增长率、求增长量</h3><ul>
-<li>公式：$ 增长量 = 现期/(1+r)*r $  太复杂<ul>
-<li>增长率<strong>百化分</strong>，$ |r| = 1/n $</li>
-<li>$ 增长量 = 现期/(n+1)；减少量 = 现期/(n-1) $</li>
+<li>公式：$ 增长量 = \frac{现期}{1+r}*r $  太复杂<ul>
+<li>增长率<strong>百化分</strong>，$ |r| = \frac{1}{n} $</li>
+<li>$ 增长量 = \frac{现期}{n+1}；减少量 = \frac{现期}{n-1} $</li>
 </ul>
 </li>
 <li>例：2016年总收入是100万元，同比增长了33.3%。求：2016年与2015年相比总收入增长了多少万元？<ul>
-<li>增长率：33.3% =&gt; 百化分：$ r=1/3 $</li>
-<li>增长量：$ 100/(3 + 1) = 25$</li>
+<li>增长率：33.3% =&gt; 百化分：$ r=\frac{1}{3} $</li>
+<li>增长量：$ \frac{100}{3 + 1} = 25$</li>
 </ul>
 </li>
 <li>【百化分】<ul>
-<li>$ 1/2 = 50\%$    $1/4 = 25\%$    $1/8 = 12.5\%$    $1/16 = 6.25\%$</li>
-<li>$ 1/3 \approx 33.3\% $    $ 1/6 \approx 16.7\% $    $ 1/12 \approx 8.3\% $</li>
-<li>$ 1/5 = 20\% $    $ 1/10 = 10\% $    $ 1/20 = 5\% $</li>
-<li>$ 1/7 \approx 14.3\% $    $ 1/14 \approx 7.1\% $</li>
-<li>$ 1/9 \approx 11.1\% $    $ 1/11 \approx 9.1\% $</li>
-<li>$ 1/13 \approx 7.7\% $    $ 1/15 \approx 6.7\% $</li>
-<li>$ 1/17 \approx 5.9\% $    $ 1/18 \approx 5.6\% $    $ 1/19 \approx 5.3\% $</li>
+<li>$ \frac{1}{2} = 50\%$    $\frac{1}{4} = 25\%$    $\frac{1}{8} = 12.5\%$    $\frac{1}{16} = 6.25\%$</li>
+<li>$ \frac{1}{3} \approx 33.3\% $    $ \frac{1}{6} \approx 16.7\% $    $ \frac{1}{12} \approx 8.3\% $</li>
+<li>$ \frac{1}{5} = 20\% $    $ \frac{1}{10} = 10\% $    $ \frac{1}{20} = 5\% $</li>
+<li>$ \frac{1}{7} \approx 14.3\% $    $ \frac{1}{14} \approx 7.1\% $</li>
+<li>$ \frac{1}{9} \approx 11.1\% $    $ \frac{1}{11} \approx 9.1\% $</li>
+<li>$ \frac{1}{13} \approx 7.7\% $    $ \frac{1}{15} \approx 6.7\% $</li>
+<li>$ \frac{1}{17} \approx 5.9\% $    $ \frac{1}{18} \approx 5.6\% $    $ \frac{1}{19} \approx 5.3\% $</li>
 </ul>
 </li>
 <li>增长率百化分之<strong>放缩法</strong><ul>
 <li>利用与背过的百分数的倍数关系，实现百化分</li>
-<li>2.5% = 1/40；1.43% = 1/70；67% = 1/1.5；22% = 1/4.5</li>
+<li>2.5% = $ \frac{1}{40} $；1.43% = $\frac{1}{70}$；67% = $\frac{1}{1.5}$；22% = $\frac{1}{4.5}$</li>
 </ul>
 </li>
 <li>增长率百化分之<strong>取中法</strong><ul>
 <li>如果遇到百分数左右难取舍，且选项接近，取中即可</li>
-<li>18.5% = 1/5.5；15.4% = 1/6.5；28.7 = 1/3.5</li>
+<li>18.5% = $\frac{1}{5.5}$；15.4% = $\frac{1}{6.5}$；28.7 = $\frac{1}{3.5}$</li>
 </ul>
 </li>
 </ul>
@@ -668,7 +668,7 @@
 </ul>
 <h2 id="比重"><a href="#比重" class="headerlink" title="比重"></a>比重</h2><h3 id="比重中的饼图问题"><a href="#比重中的饼图问题" class="headerlink" title="比重中的饼图问题"></a>比重中的饼图问题</h3><ul>
 <li>直接给总量：找特殊值<ul>
-<li>如：总量：100、四川：25 =&gt; 那么就有特殊值 1/4</li>
+<li>如：总量：100、四川：25 =&gt; 那么就有特殊值 $\frac{1}{4}$</li>
 </ul>
 </li>
 <li>没有直接给总量：<ul>
@@ -682,7 +682,7 @@
 <li>如：某班总共500人，其中男生100人，求男生占全班总人数的比重</li>
 </ul>
 </li>
-<li>公式：$ 比重 = 部分/总体 = 占前/占后$</li>
+<li>公式：$ 比重 = \frac{部分}{总体} = \frac{占前}{占后}$</li>
 <li>考察形式<ul>
 <li>已知部分和总体，求比重</li>
 <li>已知部分和比重，求总体</li>
@@ -691,8 +691,8 @@
 </li>
 <li>速算技巧：截位直除</li>
 <li>概念引申：<ul>
-<li>$ 增长贡献率=部分增量/总体增量 $</li>
-<li>$ 利润率=利润/收入 $</li>
+<li>$ 增长贡献率=\frac{部分增量}{总体增量} $</li>
+<li>$ 利润率=\frac{利润}{收入} $</li>
 </ul>
 </li>
 </ul>
@@ -705,7 +705,7 @@
 </li>
 </ul>
 </li>
-<li><p>计算公式：$ A/b * (1 + b)/(1 + a) $</p>
+<li><p>计算公式：$ \frac{A}{b} * \frac{1 + b}{1 + a} $</p>
 <ul>
 <li>A：分子（部分的现期量）    B：分母（整体的现期量）</li>
 <li>a：分子的增长率                   A：分母的增长率</li>
@@ -714,7 +714,7 @@
 <li><p>速算：</p>
 <ul>
 <li>截位直除</li>
-<li>先算现期比重，再看$ (1+b)/(1+a) $ 大于1或者小于1，结合选项排除答案</li>
+<li>先算现期比重，再看$ \frac{1+b}{1+a} $ 大于1或者小于1，结合选项排除答案</li>
 </ul>
 </li>
 </ul>
@@ -728,7 +728,7 @@
 </li>
 </ul>
 </li>
-<li><p>计算公式：$ 现期比 - 基期比 = A/B - A/B<em>(1+b)/(1+a)=A/B</em>(a-b)/(1+a) $</p>
+<li><p>计算公式：$ 现期比 - 基期比 = \frac{A}{B} - \frac{A}{B}<em>\frac{1+b}{1+a}=\frac{A}{B}</em>\frac{a-b}{1+a} $</p>
 </li>
 <li><p>升降判断：</p>
 <ul>
@@ -752,10 +752,10 @@
 </li>
 <li><p>计算公式：现期比 - 基期比</p>
 </li>
-<li><p>$A/B-A/B<em>(1+b)/(1+a)=A/B</em>(a-b)/(1+a)$</p>
+<li><p>$\frac{A}{B}-\frac{A}{B}<em>\frac{1+b}{1+a}=\frac{A}{B}</em>\frac{a-b}{1+a}$</p>
 </li>
 </ul>
-<p>​              $=A/B<em>1/(1+a)</em>(a-b)&lt;|a-b|$</p>
+<p>​              $=\frac{A}{B}<em>\frac{1}{1+a}</em>(a-b)&lt;|a-b|$</p>
 <ul>
 <li>解题步骤：<ul>
 <li>判定方向（a &gt; b，上升；a &lt; b，下降）</li>
@@ -768,8 +768,8 @@
 </ul>
 <h2 id="平均数"><a href="#平均数" class="headerlink" title="平均数"></a>平均数</h2><h3 id="现期平均"><a href="#现期平均" class="headerlink" title="现期平均"></a>现期平均</h3><ul>
 <li>题型识别：问题时间与材料一致 + 平均（均/每/单位）</li>
-<li>计算公式：$ 平均数 = 总数/个数 = A/B $</li>
-<li>计算形式：$ 后/前 $</li>
+<li>计算公式：$ 平均数 = \frac{总数}{个数} = \frac{A}{B} $</li>
+<li>计算形式：$ \frac{后}{前} $</li>
 <li>速算技巧：<ul>
 <li>截位直除</li>
 <li>削峰填谷（计算平均数）<ul>
@@ -782,7 +782,7 @@
 </ul>
 <h3 id="基期平均"><a href="#基期平均" class="headerlink" title="基期平均"></a>基期平均</h3><ul>
 <li>题型识别：问题时间在材料之前 + 平均数问法（均/每/单位）</li>
-<li>计算公式：$ 基期平均 = A/B *(1+b)/(1+a) $</li>
+<li>计算公式：$ 基期平均 = \frac{A}{B} *\frac{1+b}{1+a} $</li>
 <li>速算技巧<ul>
 <li>截位直除</li>
 <li>与现期比较</li>
@@ -791,7 +791,7 @@
 </ul>
 <h3 id="现期平均与基期平均的比较与计算"><a href="#现期平均与基期平均的比较与计算" class="headerlink" title="现期平均与基期平均的比较与计算"></a>现期平均与基期平均的比较与计算</h3><ul>
 <li>题型识别：题干中涉及两个时间 + 平均数问法</li>
-<li>公式：$ 现期平均-基期平均=A/B-A/B<em>(1+b)/(1+a)=A/B</em>(a-b)/(1+a) $</li>
+<li>公式：$ 现期平均-基期平均=\frac{A}{B}-\frac{A}{B}<em>\frac{1+b}{1+a}=\frac{A}{B}</em>\frac{a-b}{1+a} $</li>
 <li>升降判断<ul>
 <li>a &gt; b，平均数上升</li>
 <li>a &lt; b，平均数下降</li>
@@ -805,10 +805,10 @@
 <li>例子：2017年小明家总收入A，同比增长率a；总人口B，同比增长率b，求17年小明家人均收入同比增长了百分之多少？</li>
 </ul>
 </li>
-<li>公式：$ r=(a-b)/(1+b) $（a是分子的增长率，b是分母的增长率）</li>
+<li>公式：$ r=\frac{a-b}{1+b} $（a是分子的增长率，b是分母的增长率）</li>
 <li>做题逻辑<ul>
 <li>确定分子、分母（谁 / 谁）</li>
-<li>代入公式：$ r=(a-b)/(1+b)  $</li>
+<li>代入公式：$ r=\frac{a-b}{1+b}  $</li>
 </ul>
 </li>
 </ul>
@@ -817,19 +817,19 @@
 <li>例：2017年小明收入10个亿，马云收入2个亿，小明收入是马云的多少倍</li>
 </ul>
 </li>
-<li>现期倍数：$ A/B $<ul>
+<li>现期倍数：$ \frac{A}{B} $<ul>
 <li>例：2017年小明收入A个亿，同比增长率为a，马云收入B个亿，同比增长率为b，2016年小明收入是马云的多少倍？</li>
 </ul>
 </li>
-<li>基期倍数：$ A/B * (1+b)/(1+a) $</li>
+<li>基期倍数：$ \frac{A}{B} * \frac{1+b}{1+a} $</li>
 <li>速算技巧：<ul>
 <li>截位直除</li>
-<li>先计算$ A/B $，再看$ (1+b)/(1+a) $与 1 的关系 </li>
+<li>先计算$ \frac{A}{B} $，再看$ \frac{1+b}{1+a} $与 1 的关系 </li>
 </ul>
 </li>
 <li>辨析：<ul>
-<li>A是B的几倍：$ A/B $</li>
-<li>A比B增长（多）几倍：$ (A-B)/B=A/B-1 $</li>
+<li>A是B的几倍：$ \frac{A}{B} $</li>
+<li>A比B增长（多）几倍：$ \frac{A-B}{B}=\frac{A}{B}-1 $</li>
 <li>A超过B的n倍：$A &gt; B * n$</li>
 </ul>
 </li>
@@ -857,21 +857,21 @@
 </ul>
 <h3 id="间隔基期量"><a href="#间隔基期量" class="headerlink" title="间隔基期量"></a>间隔基期量</h3><ul>
 <li>题型识别：间隔一年，求基期量</li>
-<li>公式：$ 间隔基期量 = 现期量/(1+间隔增长率) $</li>
+<li>公式：$ 间隔基期量 = \frac{现期量}{1+间隔增长率} $</li>
 <li>做题步骤<ul>
 <li>先求间隔增长率 $ r = r_1 + r_2 + r_1 * r_2 $</li>
-<li>计算：$ 现期量/(1+间隔r) $</li>
+<li>计算：$ \frac{现期量}{1+间隔r} $</li>
 </ul>
 </li>
 </ul>
 <h3 id="年均增长率"><a href="#年均增长率" class="headerlink" title="年均增长率"></a>年均增长率</h3><ul>
 <li>题型识别：年均增长最快、年均增速排序</li>
 <li>公式<ul>
-<li>$ (1+r)^n=现期量/基期量 $（n 为现期和基期的年份差）</li>
+<li>$ (1+r)^n=\frac{现期量}{基期量 }$（n 为现期和基期的年份差）</li>
 </ul>
 </li>
 <li>技巧：<ul>
-<li>比较：n 相同，直接比较$ 现期/基期 $</li>
+<li>比较：n 相同，直接比较$ \frac{现期}{基期} $</li>
 <li>计算：放弃</li>
 </ul>
 </li>
@@ -937,24 +937,24 @@
 <li><strong>增长率</strong>与<strong>倍数</strong><ul>
 <li>增长率：比基数多出的<strong>比率</strong><ul>
 <li>A是B的多少倍</li>
-<li>倍数：$A/B$</li>
+<li>倍数：$\frac{A}{B}$</li>
 </ul>
 </li>
 <li>倍数：两数直接的<strong>比值</strong><ul>
 <li>A比B多 / 增长多少（%）</li>
-<li>$ 增长率 = (A-B)/B = A/B - 1 $</li>
+<li>$ 增长率 = \frac{A-B}{B} = \frac{A}{B} - 1 $</li>
 </ul>
 </li>
 <li>倍数 = 增长率 + 1</li>
 </ul>
 </li>
-<li><strong>成数</strong>与<strong>翻番</strong><ul>
+<li><strong>[成数</strong>与<strong>翻番</strong><ul>
 <li>成数：几成相当于十分之几</li>
 <li>翻番：翻一番为原来的两倍；翻两番为原来的四倍；依此类推，翻n番为原来的$ 2^n $倍</li>
 </ul>
 </li>
 <li>增幅 = 增长幅度 = 增长率 = 增速</li>
-<li>降幅：必须下降，r &lt; 0</li>
+<li>降幅：必须下降，r &lt; 0 </li>
 </ul>
 
       
